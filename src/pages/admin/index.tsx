@@ -22,7 +22,7 @@ export default function Admin() {
       <Head>
         <title>Admin</title>
       </Head>
-      <h3 className="text-2xl font-bold">Events</h3>
+      <h3 className="text-2xl font-bold">Hendelser</h3>
       {events.map((event) => {
         return (
           <div key={event.id} className="py-2">

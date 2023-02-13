@@ -16,73 +16,74 @@ export default function Home() {
         <link href="/output.css" rel="stylesheet"/>
       </Head>
 
-      <main className={styles.main}>
+      <main>
 
-      <div className="w-full mx-12 space-y-5"> {/*mx fungerer ikke som den skal, hvis denne div blir fikset fjern w-x i children.*/}
-        {/*Video 1*/}
-        <div className="w-full shadow-lg bg-neutral-200 flex">
-          <div className="box-content h-52 w-2/5 hover:box-content bg-black border-2 border-cyan-600"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="align-top text-small text-neutral-500">event date | event time</div>
-              <div className="align-middle text-black font-semibold">Video title</div>
-              <div className="align-bottom text-small text-neutral-500">Video origin</div>
-          </div>
-        </div>
+        <h1 className="text-5xl text-black font-semibold">Poll title</h1>
+        <h2 className="text-2xl text-black">Poll description</h2>
+        <br></br>
+        <h3 className="text-xl text-black">Current vote count: <span className="text-4xl">x</span></h3>
 
-        {/*Video 2*/}
-        <div className="w-full shadow-lg bg-neutral-200 flex">
-          <div className="box-content h-52 w-2/5 hover:box-content bg-black border-2 border-cyan-600"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="mb-1 w-1/1 align-top text-small text-neutral-500">event date | event time</div>
-              <div className="w-1/1 align-middle text-black font-semibold">Video title</div>
-              <div className="w-1/1 align-bottom text-small text-neutral-500">Video origin</div>
+        {/*Note: adjust to small screen*/}
+        <div className="w-full space-y-5">
+          {/*Video 1*/}
+          <div className="w-auto shadow-lg bg-neutral-100 flex">
+            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
+              <div className="space-x-4 space-y-8">
+                <div className="align-top text-small text-neutral-500">event date | video length</div>
+                <div className="align-middle text-black font-semibold">Video title</div>
+                <div className="align-bottom text-small text-neutral-500">Video origin</div>
+            </div>
           </div>
-        </div>
-        
-        {/*Video 3*/}
-        <div className="w-full shadow-lg bg-neutral-200 flex">
-          <div className="box-content h-52 w-2/5 hover:box-content bg-black border-2 border-cyan-600"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="align-top text-small text-neutral-500">event date | event time</div>
-              <div className="align-middle text-black font-semibold">Video title</div>
-              <div className="align-bottom text-small text-neutral-500">Video origin</div>
-          </div>
-        </div>
 
-        {/*Video 4*/}
-        <div className="w-full shadow-lg bg-neutral-200 flex">
-          <div className="box-content h-52 w-2/5 hover:box-content bg-black border-2 border-cyan-600"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="mb-1 w-1/1 align-top text-small text-neutral-500">event date | event time</div>
-              <div className="w-1/1 align-middle text-black font-semibold">Video title</div>
-              <div className="w-1/1 align-bottom text-small text-neutral-500">Video origin</div>
+          {/*Video 2*/}
+          <div className="w-full shadow-lg bg-neutral-100 flex">
+            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
+              <div className="space-x-4 space-y-8">
+                <div className="mb-1 w-1/1 align-top text-small text-neutral-500">event date | video length</div>
+                <div className="w-1/1 align-middle text-black font-semibold">Video title</div>
+                <div className="w-1/1 align-bottom text-small text-neutral-500">Video origin</div>
+            </div>
+          </div>
+          
+          {/*Video 3*/}
+          <div className="w-full shadow-lg bg-neutral-100 flex">
+            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
+              <div className="space-x-4 space-y-8">
+                <div className="align-top text-small text-neutral-500">event date | video length</div>
+                <div className="align-middle text-black font-semibold">Video title</div>
+                <div className="align-bottom text-small text-neutral-500">Video origin</div>
+            </div>
+          </div>
+
+          {/*Video 4*/}
+          <div className="w-full shadow-lg bg-neutral-100 flex">
+            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
+              <div className="space-x-4 space-y-8">
+                <div className="mb-1 w-1/1 align-top text-small text-neutral-500">event date | video length</div>
+                <div className="w-1/1 align-middle text-black font-semibold">Video title</div>
+                <div className="w-1/1 align-bottom text-small text-neutral-500">Video origin</div>
+            </div>
+          </div>
+
+          {/*Video 5*/}
+          <div className="w-full shadow-lg bg-neutral-100 flex">
+            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
+              <div className="space-x-4 space-y-8">
+                <div className="mb-1 w-1/1 align-top text-small text-neutral-500">event date | video length</div>
+                <div className="w-1/1 align-middle text-black font-semibold">Video title</div>
+                <div className="w-1/1 align-bottom text-small text-neutral-500">Video origin</div>
+            </div>
           </div>
         </div>
-      </div>
       
 
 
       {/* To be removed.
-      Kept for easy access, and the logo looks good:).*/}
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
+      Kept for easy access.*/}
+      <br></br>
+      <div className="w-full space-y-5">
+          {/*Video 1*/}
+          <div className="w-full shadow-lg bg-neutral-800 flex">
 
         <div className={styles.grid}>
           <a
@@ -141,6 +142,8 @@ export default function Home() {
               with&nbsp;Vercel.
             </p>
           </a>
+        </div>
+        </div>
         </div>
       </main>
     </>

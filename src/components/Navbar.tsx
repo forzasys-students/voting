@@ -6,6 +6,7 @@ export default function Navbar() {
         <div>
           <Link href="/poll" className="text-right mb-2 p-2 text-lg hover:bg-white hover:text-black float-right font-medium cursor-pointer">Login</Link>
           <Link href="/" className="text-right mb-2 p-2 text-lg hover:bg-white hover:text-black float-right font-medium cursor-pointer">Bytt til tidligere avstemmninger</Link>
+          <Link href="/" className="text-right mb-2 p-2 text-lg hover:bg-white hover:text-black float-right font-medium cursor-pointer">Poll</Link>
         </div>
         <Link href="/" className="bg-sky-400 text-white font-bold py-2 px-4 float-right border-4 text-3xl cursor-pointer">ALLE AVSTEMMNINGER</Link>
       </div>

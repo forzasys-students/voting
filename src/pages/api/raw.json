@@ -1,0 +1,2169 @@
+{
+  "playlists": [
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-11-13T17:18:13.969253Z",
+      "description": "R\u00f8dt kort Viking: Gianni Ryan Stensness.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Viking: Gianni Ryan Stensness.",
+          "from_timestamp": 5189000,
+          "id": 140228,
+          "recording_timestamp": "2022-11-13T17:16:27.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 2411,
+                "type": "player",
+                "value": "Gianni Ryan Stensness"
+              },
+              "team": { "id": 2, "type": "team", "value": "Viking" }
+            }
+          ],
+          "to_timestamp": 5214000,
+          "video_asset_id": 6115,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/6115"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/ap79xuz5lhks7",
+      "game": {
+        "attendance": 0,
+        "date": "2022-11-13",
+        "end_of_1st_half": "2022-11-13T16:48:42.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-11-13T17:53:50.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-11-13T17:53:50.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 2,
+          "import_id": 198,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Viking-Viking_Logo_RGB.png",
+          "name": "Viking",
+          "short_name": "VIK"
+        },
+        "home_team_goals": 1,
+        "id": 3417,
+        "import_id": "7962937",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-11-13T18:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 30,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-11-13T16:00:30.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-11-13T17:04:45.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-11-13T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 5,
+          "import_id": 270,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Odd-ODD_logo.png",
+          "name": "Odd",
+          "short_name": "ODD"
+        },
+        "visiting_team_goals": 1
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/6115/05199.jpg",
+      "id": "ap79xuz5lhks7",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/ap79xuz5lhks7",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-11-13T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/6115/05199.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/6115:5189000:5214000/Manifest.m3u8",
+      "view_count": 14
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-10-16T15:13:38.681983Z",
+      "description": "R\u00f8dt kort V\u00e5lerenga: Magnus Smelhus Sj\u00f8eng.",
+      "duration_ms": 24960,
+      "events": [
+        {
+          "content_source": "Norkring",
+          "description": "R\u00f8dt kort V\u00e5lerenga: Magnus Smelhus Sj\u00f8eng.",
+          "from_timestamp": 5929040,
+          "id": 137450,
+          "recording_timestamp": "2022-10-16T15:13:10.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 2073,
+                "type": "player",
+                "value": "Magnus Smelhus Sj\u00f8eng"
+              },
+              "team": { "id": 1, "type": "team", "value": "V\u00e5lerenga" }
+            }
+          ],
+          "to_timestamp": 5954000,
+          "video_asset_id": 6057,
+          "video_asset_name": "https://norkring-ntf-od.telenorcdn.net/ntf/7962906-FB21ABE4/img/img.00254.jpg"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a7mka1pgszrr",
+      "game": {
+        "attendance": 0,
+        "date": "2022-10-16",
+        "end_of_1st_half": "2022-10-16T15:46:05.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-10-16T16:49:58.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-10-16T16:49:58.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 1,
+          "import_id": 169882,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Valerenga-vif.png",
+          "name": "V\u00e5lerenga",
+          "short_name": "VIF"
+        },
+        "home_team_goals": 0,
+        "id": 3385,
+        "import_id": "7962906",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-10-16T17:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 26,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-10-16T15:00:01.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-10-16T16:01:56.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-10-16T15:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 14,
+          "import_id": 4,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Bod_Glimt-bodo.png",
+          "name": "Bod\u00f8/Glimt",
+          "short_name": "B/G"
+        },
+        "visiting_team_goals": 6
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://norkring-ntf-od.telenorcdn.net/ntf/7962906-FB21ABE4/img/img.06193.jpg",
+      "id": "a7mka1pgszrr",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a7mka1pgszrr",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-10-16T17:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://norkring-ntf-od.telenorcdn.net/ntf/7962906-FB21ABE4/img/img.06193.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/6057:5929040:5954000/Manifest.m3u8",
+      "view_count": 44
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-09-04T16:37:21.221351Z",
+      "description": "R\u00f8dt kort Jerv: Erik Tobias Tangen Sandberg.",
+      "duration_ms": 14000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Jerv: Erik Tobias Tangen Sandberg.",
+          "from_timestamp": 2810000,
+          "id": 133421,
+          "recording_timestamp": "2022-09-04T16:36:49.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1113,
+                "type": "player",
+                "value": "Erik Tobias Tangen Sandberg"
+              },
+              "team": { "id": 38, "type": "team", "value": "Jerv" }
+            }
+          ],
+          "to_timestamp": 2824000,
+          "video_asset_id": 5977,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5977"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/au3a1fzb5oml4",
+      "game": {
+        "attendance": 0,
+        "date": "2022-09-04",
+        "end_of_1st_half": "2022-09-04T16:47:01.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-09-04T17:53:04.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-09-04T17:53:04.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 5,
+          "import_id": 270,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Odd-ODD_logo.png",
+          "name": "Odd",
+          "short_name": "ODD"
+        },
+        "home_team_goals": 2,
+        "id": 3339,
+        "import_id": "7962865",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-09-04T18:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 21,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-09-04T15:59:59.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-09-04T17:02:57.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-09-04T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 38,
+          "import_id": 259,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-obosligaen/Jerv-jerv_logo.png",
+          "name": "Jerv",
+          "short_name": "JER"
+        },
+        "visiting_team_goals": 1
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5977/02820.jpg",
+      "id": "au3a1fzb5oml4",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/au3a1fzb5oml4",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-09-04T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5977/02820.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5977:2810000:2824000/Manifest.m3u8",
+      "view_count": 20
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-08-28T16:34:04.342989Z",
+      "description": "R\u00f8dt kort Sarpsborg 08: Anton Skipper Hendriksen.",
+      "duration_ms": 19000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Sarpsborg 08: Anton Skipper Hendriksen.",
+          "from_timestamp": 2605000,
+          "id": 132428,
+          "recording_timestamp": "2022-08-28T16:33:23.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 3586,
+                "type": "player",
+                "value": "Anton Skipper Hendriksen"
+              },
+              "team": { "id": 3, "type": "team", "value": "Sarpsborg 08" }
+            }
+          ],
+          "to_timestamp": 2624000,
+          "video_asset_id": 5960,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5960"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/abz5uaavk0uxv",
+      "game": {
+        "attendance": 0,
+        "date": "2022-08-28",
+        "end_of_1st_half": "2022-08-28T16:46:07.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-08-28T17:48:38.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-08-28T17:48:38.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 15,
+          "import_id": 3,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Molde-molde.png",
+          "name": "Molde",
+          "short_name": "MOL"
+        },
+        "home_team_goals": 4,
+        "id": 3332,
+        "import_id": "7962855",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-08-28T18:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 20,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-08-28T16:00:04.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-08-28T17:01:33.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-08-28T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 3,
+          "import_id": 797,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Sarpsborg_08-s08.png",
+          "name": "Sarpsborg 08",
+          "short_name": "S08"
+        },
+        "visiting_team_goals": 1
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5960/02615.jpg",
+      "id": "abz5uaavk0uxv",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/abz5uaavk0uxv",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-08-28T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5960/02615.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5960:2605000:2624000/Manifest.m3u8",
+      "view_count": 27
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-08-12T18:48:33.097996Z",
+      "description": "R\u00f8dt kort Sandefjord Fotball: Jesper Taaje.",
+      "duration_ms": 10000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Sandefjord Fotball: Jesper Taaje.",
+          "from_timestamp": 7088000,
+          "id": 130779,
+          "recording_timestamp": "2022-08-12T18:48:06.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 3317,
+                "type": "player",
+                "value": "Jesper Taaje"
+              },
+              "team": {
+                "id": 18,
+                "type": "team",
+                "value": "Sandefjord Fotball"
+              }
+            }
+          ],
+          "to_timestamp": 7098000,
+          "video_asset_id": 5926,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5926"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/auexf2a8ddz8w",
+      "game": {
+        "attendance": 0,
+        "date": "2022-08-12",
+        "end_of_1st_half": "2022-08-12T17:48:20.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-08-12T18:53:05.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-08-12T18:53:05.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 18,
+          "import_id": 195,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-tippeligaen/Sandefjord_Fotball-Sandefjord.png",
+          "name": "Sandefjord Fotball",
+          "short_name": "SAN"
+        },
+        "home_team_goals": 2,
+        "id": 3319,
+        "import_id": "7962839",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-08-12T19:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 18,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-08-12T17:00:15.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-08-12T18:03:45.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-08-12T17:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 8,
+          "import_id": 145,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Rosenborg-rbk.png",
+          "name": "Rosenborg",
+          "short_name": "RBK"
+        },
+        "visiting_team_goals": 5
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5926/07098.jpg",
+      "id": "auexf2a8ddz8w",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/auexf2a8ddz8w",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-08-12T19:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5926/07098.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5926:7088000:7098000/Manifest.m3u8",
+      "view_count": 72
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-08-07T17:47:08.845149Z",
+      "description": "R\u00f8dt kort Kristiansund: Pemi Moumbagna Faris.",
+      "duration_ms": 11000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Kristiansund: Pemi Moumbagna Faris.",
+          "from_timestamp": 7001000,
+          "id": 130371,
+          "recording_timestamp": "2022-08-07T17:46:40.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 2138,
+                "type": "player",
+                "value": "Pemi Moumbagna Faris"
+              },
+              "team": { "id": 22, "type": "team", "value": "Kristiansund" }
+            }
+          ],
+          "to_timestamp": 7012000,
+          "video_asset_id": 5915,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5915"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/agtya95npp1x5",
+      "game": {
+        "attendance": 0,
+        "date": "2022-08-07",
+        "end_of_1st_half": "2022-08-07T16:47:51.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-08-07T17:55:08.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-08-07T17:55:08.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 22,
+          "import_id": 785,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Kristiansund-Kristiansund_BK.png",
+          "name": "Kristiansund",
+          "short_name": "KBK"
+        },
+        "home_team_goals": 2,
+        "id": 3307,
+        "import_id": "7962829",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-08-07T18:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 17,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-08-07T16:00:02.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-08-07T17:04:04.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-08-07T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 15,
+          "import_id": 3,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Molde-molde.png",
+          "name": "Molde",
+          "short_name": "MOL"
+        },
+        "visiting_team_goals": 3
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5915/07011.jpg",
+      "id": "agtya95npp1x5",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/agtya95npp1x5",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-08-07T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5915/07011.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5915:7001000:7012000/Manifest.m3u8",
+      "view_count": 32
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-08-06T17:16:01.978691Z",
+      "description": "R\u00f8dt kort HamKam: Halvor R\u00f8d\u00f8len Opsahl.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort HamKam: Halvor R\u00f8d\u00f8len Opsahl.",
+          "from_timestamp": 5064000,
+          "id": 129954,
+          "recording_timestamp": "2022-08-06T17:14:22.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 3428,
+                "type": "player",
+                "value": "Halvor R\u00f8d\u00f8len Opsahl"
+              },
+              "team": { "id": 35, "type": "team", "value": "HamKam" }
+            }
+          ],
+          "to_timestamp": 5089000,
+          "video_asset_id": 5910,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5910"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a5ms23c7986ai",
+      "game": {
+        "attendance": 0,
+        "date": "2022-08-06",
+        "end_of_1st_half": "2022-08-06T16:46:14.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-08-06T17:53:38.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-08-06T17:53:38.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 8,
+          "import_id": 145,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Rosenborg-rbk.png",
+          "name": "Rosenborg",
+          "short_name": "RBK"
+        },
+        "home_team_goals": 2,
+        "id": 3310,
+        "import_id": "7962832",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-08-06T18:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 17,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-08-06T16:00:06.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-08-06T17:02:26.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-08-06T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 35,
+          "import_id": 63,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-obosligaen/HamKam-hamkam_logo.png",
+          "name": "HamKam",
+          "short_name": "HAM"
+        },
+        "visiting_team_goals": 1
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5910/05074.jpg",
+      "id": "a5ms23c7986ai",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a5ms23c7986ai",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-08-06T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5910/05074.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5910:5064000:5089000/Manifest.m3u8",
+      "view_count": 30
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-07-31T15:07:34.083245Z",
+      "description": "R\u00f8dt kort Sarpsborg 08: Anton Janos J\u00f6nsson Saletros.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Sarpsborg 08: Anton Janos J\u00f6nsson Saletros.",
+          "from_timestamp": 6421000,
+          "id": 129564,
+          "recording_timestamp": "2022-07-31T15:06:59.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 2070,
+                "type": "player",
+                "value": "Anton Janos J\u00f6nsson Saletros"
+              },
+              "team": { "id": 3, "type": "team", "value": "Sarpsborg 08" }
+            }
+          ],
+          "to_timestamp": 6446000,
+          "video_asset_id": 5891,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5891"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/arlt97zndgyex",
+      "game": {
+        "attendance": 0,
+        "date": "2022-07-31",
+        "end_of_1st_half": "2022-07-31T14:22:37.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-07-31T15:27:39.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-07-31T15:27:39.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 3,
+          "import_id": 797,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Sarpsborg_08-s08.png",
+          "name": "Sarpsborg 08",
+          "short_name": "S08"
+        },
+        "home_team_goals": 0,
+        "id": 3302,
+        "import_id": "7962823",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-07-31T16:00:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 16,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-07-31T13:30:44.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-07-31T14:38:32.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-07-31T13:30:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 13,
+          "import_id": 177,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Lillestrm-lsk.png",
+          "name": "Lillestr\u00f8m",
+          "short_name": "LSK"
+        },
+        "visiting_team_goals": 2
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5891/06431.jpg",
+      "id": "arlt97zndgyex",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/arlt97zndgyex",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-07-31T15:50:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5891/06431.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5891:6421000:6446000/Manifest.m3u8",
+      "view_count": 22
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-07-31T14:18:25.113152Z",
+      "description": "R\u00f8dt kort Sarpsborg 08: J\u00f8rgen Horn.",
+      "duration_ms": 16000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Sarpsborg 08: J\u00f8rgen Horn.",
+          "from_timestamp": 3474000,
+          "id": 129411,
+          "recording_timestamp": "2022-07-31T14:17:52.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1456,
+                "type": "player",
+                "value": "J\u00f8rgen Horn"
+              },
+              "team": { "id": 3, "type": "team", "value": "Sarpsborg 08" }
+            }
+          ],
+          "to_timestamp": 3490000,
+          "video_asset_id": 5891,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5891"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a5839nc90ntv3",
+      "game": {
+        "attendance": 0,
+        "date": "2022-07-31",
+        "end_of_1st_half": "2022-07-31T14:22:37.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-07-31T15:27:39.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-07-31T15:27:39.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 3,
+          "import_id": 797,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Sarpsborg_08-s08.png",
+          "name": "Sarpsborg 08",
+          "short_name": "S08"
+        },
+        "home_team_goals": 0,
+        "id": 3302,
+        "import_id": "7962823",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-07-31T16:00:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 16,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-07-31T13:30:44.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-07-31T14:38:32.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-07-31T13:30:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 13,
+          "import_id": 177,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Lillestrm-lsk.png",
+          "name": "Lillestr\u00f8m",
+          "short_name": "LSK"
+        },
+        "visiting_team_goals": 2
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5891/03484.jpg",
+      "id": "a5839nc90ntv3",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a5839nc90ntv3",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-07-31T15:50:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5891/03484.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5891:3474000:3490000/Manifest.m3u8",
+      "view_count": 19
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-07-24T17:18:16.082910Z",
+      "description": "R\u00f8dt kort Sarpsborg 08: Anton Skipper Hendriksen.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Sarpsborg 08: Anton Skipper Hendriksen.",
+          "from_timestamp": 5180000,
+          "id": 128502,
+          "recording_timestamp": "2022-07-24T17:16:18.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 3586,
+                "type": "player",
+                "value": "Anton Skipper Hendriksen"
+              },
+              "team": { "id": 3, "type": "team", "value": "Sarpsborg 08" }
+            }
+          ],
+          "to_timestamp": 5205000,
+          "video_asset_id": 5874,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5874"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a3o447wnjbsm7",
+      "game": {
+        "attendance": 0,
+        "date": "2022-07-24",
+        "end_of_1st_half": "2022-07-24T16:46:59.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-07-24T17:52:15.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-07-24T17:52:15.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 9,
+          "import_id": 202,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Haugesund-FKH_hoved_RGB.png",
+          "name": "Haugesund",
+          "short_name": "FKH"
+        },
+        "home_team_goals": 3,
+        "id": 3292,
+        "import_id": "7962812",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-07-24T18:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 15,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-07-24T15:59:50.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-07-24T17:02:04.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-07-24T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 3,
+          "import_id": 797,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Sarpsborg_08-s08.png",
+          "name": "Sarpsborg 08",
+          "short_name": "S08"
+        },
+        "visiting_team_goals": 1
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5874/05190.jpg",
+      "id": "a3o447wnjbsm7",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a3o447wnjbsm7",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-07-24T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5874/05190.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5874:5180000:5205000/Manifest.m3u8",
+      "view_count": 20
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-07-03T19:51:05.250379Z",
+      "description": "R\u00f8dt kort Rosenborg: Markus Henriksen.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Rosenborg: Markus Henriksen.",
+          "from_timestamp": 7225000,
+          "id": 125979,
+          "recording_timestamp": "2022-07-03T19:50:24.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 2231,
+                "type": "player",
+                "value": "Markus Henriksen"
+              },
+              "team": { "id": 8, "type": "team", "value": "Rosenborg" }
+            }
+          ],
+          "to_timestamp": 7250000,
+          "video_asset_id": 5822,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5822"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a2mejwcyhz821",
+      "game": {
+        "attendance": 0,
+        "date": "2022-07-03",
+        "end_of_1st_half": "2022-07-03T18:48:11.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-07-03T19:54:24.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-07-03T19:54:24.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 2,
+          "import_id": 198,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Viking-Viking_Logo_RGB.png",
+          "name": "Viking",
+          "short_name": "VIK"
+        },
+        "home_team_goals": 1,
+        "id": 3273,
+        "import_id": "7962794",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-07-03T20:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 12,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-07-03T18:00:07.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-07-03T19:03:42.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-07-03T18:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 8,
+          "import_id": 145,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Rosenborg-rbk.png",
+          "name": "Rosenborg",
+          "short_name": "RBK"
+        },
+        "visiting_team_goals": 1
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5822/07235.jpg",
+      "id": "a2mejwcyhz821",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a2mejwcyhz821",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-07-03T20:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5822/07235.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5822:7225000:7250000/Manifest.m3u8",
+      "view_count": 37
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-07-03T19:50:47.289724Z",
+      "description": "R\u00f8dt kort Viking: Zlatko Tripic.",
+      "duration_ms": 21000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Viking: Zlatko Tripic.",
+          "from_timestamp": 7213000,
+          "id": 125977,
+          "recording_timestamp": "2022-07-03T19:50:12.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1624,
+                "type": "player",
+                "value": "Zlatko Tripic"
+              },
+              "team": { "id": 2, "type": "team", "value": "Viking" }
+            }
+          ],
+          "to_timestamp": 7234000,
+          "video_asset_id": 5822,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5822"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a2p5wt9szapp",
+      "game": {
+        "attendance": 0,
+        "date": "2022-07-03",
+        "end_of_1st_half": "2022-07-03T18:48:11.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-07-03T19:54:24.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-07-03T19:54:24.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 2,
+          "import_id": 198,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Viking-Viking_Logo_RGB.png",
+          "name": "Viking",
+          "short_name": "VIK"
+        },
+        "home_team_goals": 1,
+        "id": 3273,
+        "import_id": "7962794",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-07-03T20:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 12,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-07-03T18:00:07.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-07-03T19:03:42.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-07-03T18:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 8,
+          "import_id": 145,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Rosenborg-rbk.png",
+          "name": "Rosenborg",
+          "short_name": "RBK"
+        },
+        "visiting_team_goals": 1
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5822/07223.jpg",
+      "id": "a2p5wt9szapp",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a2p5wt9szapp",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-07-03T20:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5822/07223.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5822:7213000:7234000/Manifest.m3u8",
+      "view_count": 61
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-07-03T16:40:13.339793Z",
+      "description": "R\u00f8dt kort Sarpsborg 08: Simen Vidtun Nilsen.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Sarpsborg 08: Simen Vidtun Nilsen.",
+          "from_timestamp": 2971000,
+          "id": 125741,
+          "recording_timestamp": "2022-07-03T16:39:30.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1810,
+                "type": "player",
+                "value": "Simen Vidtun Nilsen"
+              },
+              "team": { "id": 3, "type": "team", "value": "Sarpsborg 08" }
+            }
+          ],
+          "to_timestamp": 2996000,
+          "video_asset_id": 5821,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5821"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a91i8498yrati",
+      "game": {
+        "attendance": 0,
+        "date": "2022-07-03",
+        "end_of_1st_half": "2022-07-03T16:47:35.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-07-03T17:55:13.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-07-03T17:55:13.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 3,
+          "import_id": 797,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Sarpsborg_08-s08.png",
+          "name": "Sarpsborg 08",
+          "short_name": "S08"
+        },
+        "home_team_goals": 4,
+        "id": 3272,
+        "import_id": "7962791",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-07-03T18:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 12,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-07-03T16:01:32.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-07-03T17:03:08.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-07-03T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 18,
+          "import_id": 195,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-tippeligaen/Sandefjord_Fotball-Sandefjord.png",
+          "name": "Sandefjord Fotball",
+          "short_name": "SAN"
+        },
+        "visiting_team_goals": 3
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5821/02981.jpg",
+      "id": "a91i8498yrati",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a91i8498yrati",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-07-03T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5821/02981.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5821:2971000:2996000/Manifest.m3u8",
+      "view_count": 57
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-07-02T17:41:29.677153Z",
+      "description": "R\u00f8dt kort Odd: Odin Luraas Bj\u00f8rtuft.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Odd: Odin Luraas Bj\u00f8rtuft.",
+          "from_timestamp": 6594000,
+          "id": 125517,
+          "recording_timestamp": "2022-07-02T17:39:52.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1520,
+                "type": "player",
+                "value": "Odin Luraas Bj\u00f8rtuft"
+              },
+              "team": { "id": 5, "type": "team", "value": "Odd" }
+            }
+          ],
+          "to_timestamp": 6619000,
+          "video_asset_id": 5814,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5814"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a6lhq0y22mnbj",
+      "game": {
+        "attendance": 0,
+        "date": "2022-07-02",
+        "end_of_1st_half": "2022-07-02T16:45:37.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-07-02T17:56:21.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-07-02T17:56:21.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 5,
+          "import_id": 270,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Odd-ODD_logo.png",
+          "name": "Odd",
+          "short_name": "ODD"
+        },
+        "home_team_goals": 3,
+        "id": 3267,
+        "import_id": "7962792",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-07-02T18:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 12,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-07-02T15:59:59.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-07-02T17:01:28.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-07-02T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 14,
+          "import_id": 4,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Bod_Glimt-bodo.png",
+          "name": "Bod\u00f8/Glimt",
+          "short_name": "B/G"
+        },
+        "visiting_team_goals": 2
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5814/06604.jpg",
+      "id": "a6lhq0y22mnbj",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a6lhq0y22mnbj",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-07-02T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5814/06604.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5814:6594000:6619000/Manifest.m3u8",
+      "view_count": 39
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-06-26T17:45:30.961092Z",
+      "description": "R\u00f8dt kort Lillestr\u00f8m: Gjermund \u00c5sen.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Lillestr\u00f8m: Gjermund \u00c5sen.",
+          "from_timestamp": 6877000,
+          "id": 125072,
+          "recording_timestamp": "2022-06-26T17:44:36.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 473,
+                "type": "player",
+                "value": "Gjermund \u00c5sen"
+              },
+              "team": { "id": 13, "type": "team", "value": "Lillestr\u00f8m" }
+            }
+          ],
+          "to_timestamp": 6902000,
+          "video_asset_id": 5802,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5802"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a36mk9t3hp7e",
+      "game": {
+        "attendance": 0,
+        "date": "2022-06-26",
+        "end_of_1st_half": "2022-06-26T16:52:05.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-06-26T18:00:01.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-06-26T18:00:01.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 16,
+          "import_id": 816,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Strmsgodset-Strmsgodset_IF.png",
+          "name": "Str\u00f8msgodset",
+          "short_name": "SIF"
+        },
+        "home_team_goals": 3,
+        "id": 3260,
+        "import_id": "7962783",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-06-26T18:45:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 11,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-06-26T16:03:58.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-06-26T17:07:49.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-06-26T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 13,
+          "import_id": 177,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Lillestrm-lsk.png",
+          "name": "Lillestr\u00f8m",
+          "short_name": "LSK"
+        },
+        "visiting_team_goals": 0
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5802/06887.jpg",
+      "id": "a36mk9t3hp7e",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a36mk9t3hp7e",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-06-26T18:35:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5802/06887.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5802:6877000:6902000/Manifest.m3u8",
+      "view_count": 43
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-06-25T14:13:13.443131Z",
+      "description": "R\u00f8dt kort Viking: Kristoffer Lie L\u00f8kberg.",
+      "duration_ms": 19000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Viking: Kristoffer Lie L\u00f8kberg.",
+          "from_timestamp": 1357000,
+          "id": 124602,
+          "recording_timestamp": "2022-06-25T14:12:36.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1344,
+                "type": "player",
+                "value": "Kristoffer Lie L\u00f8kberg"
+              },
+              "team": { "id": 2, "type": "team", "value": "Viking" }
+            }
+          ],
+          "to_timestamp": 1376000,
+          "video_asset_id": 5797,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5797"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a6rifub6714bg",
+      "game": {
+        "attendance": 0,
+        "date": "2022-06-25",
+        "end_of_1st_half": "2022-06-25T14:51:00.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-06-25T15:52:27.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-06-25T15:52:27.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 9,
+          "import_id": 202,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Haugesund-FKH_hoved_RGB.png",
+          "name": "Haugesund",
+          "short_name": "FKH"
+        },
+        "home_team_goals": 4,
+        "id": 3258,
+        "import_id": "7962781",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-06-25T16:30:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 11,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-06-25T14:01:44.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-06-25T15:04:21.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-06-25T14:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 2,
+          "import_id": 198,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Viking-Viking_Logo_RGB.png",
+          "name": "Viking",
+          "short_name": "VIK"
+        },
+        "visiting_team_goals": 2
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5797/01367.jpg",
+      "id": "a6rifub6714bg",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a6rifub6714bg",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-06-25T16:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5797/01367.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5797:1357000:1376000/Manifest.m3u8",
+      "view_count": 60
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-05-28T14:42:46.234203Z",
+      "description": "R\u00f8dt kort HamKam: Fredrik Vangstad Sj\u00f8lstad.",
+      "duration_ms": 10000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort HamKam: Fredrik Vangstad Sj\u00f8lstad.",
+          "from_timestamp": 3144000,
+          "id": 123167,
+          "recording_timestamp": "2022-05-28T14:42:22.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1876,
+                "type": "player",
+                "value": "Fredrik Vangstad Sj\u00f8lstad"
+              },
+              "team": { "id": 35, "type": "team", "value": "HamKam" }
+            }
+          ],
+          "to_timestamp": 3154000,
+          "video_asset_id": 5768,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5768"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/avncd54ilufj1",
+      "game": {
+        "attendance": 0,
+        "date": "2022-05-28",
+        "end_of_1st_half": "2022-05-28T14:46:06.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-05-28T15:50:51.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-05-28T15:50:51.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 35,
+          "import_id": 63,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-obosligaen/HamKam-hamkam_logo.png",
+          "name": "HamKam",
+          "short_name": "HAM"
+        },
+        "home_team_goals": 1,
+        "id": 3242,
+        "import_id": "7962763",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-05-28T17:00:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 9,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-05-28T14:00:02.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-05-28T15:02:21.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-05-28T14:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 5,
+          "import_id": 270,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Odd-ODD_logo.png",
+          "name": "Odd",
+          "short_name": "ODD"
+        },
+        "visiting_team_goals": 2
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5768/03154.jpg",
+      "id": "avncd54ilufj1",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/avncd54ilufj1",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-05-28T16:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5768/03154.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5768:3144000:3154000/Manifest.m3u8",
+      "view_count": 17
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-05-16T16:36:02.440975Z",
+      "description": "R\u00f8dt kort Jerv: Erlend Hustad.",
+      "duration_ms": 22000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Jerv: Erlend Hustad.",
+          "from_timestamp": 2732000,
+          "id": 121209,
+          "recording_timestamp": "2022-05-16T16:35:30.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 2105,
+                "type": "player",
+                "value": "Erlend Hustad"
+              },
+              "team": { "id": 38, "type": "team", "value": "Jerv" }
+            }
+          ],
+          "to_timestamp": 2754000,
+          "video_asset_id": 5730,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5730"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/ar4hn0yoe65oa",
+      "game": {
+        "attendance": 0,
+        "date": "2022-05-16",
+        "end_of_1st_half": "2022-05-16T16:47:43.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-05-16T17:51:52.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-05-16T17:51:52.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 2,
+          "import_id": 198,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Viking-Viking_Logo_RGB.png",
+          "name": "Viking",
+          "short_name": "VIK"
+        },
+        "home_team_goals": 3,
+        "id": 3219,
+        "import_id": "7962745",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-05-16T19:00:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 6,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-05-16T16:00:30.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-05-16T17:03:44.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-05-16T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 38,
+          "import_id": 259,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-obosligaen/Jerv-jerv_logo.png",
+          "name": "Jerv",
+          "short_name": "JER"
+        },
+        "visiting_team_goals": 0
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5730/02742.jpg",
+      "id": "ar4hn0yoe65oa",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/ar4hn0yoe65oa",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-05-16T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5730/02742.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5730:2732000:2754000/Manifest.m3u8",
+      "view_count": 49
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-05-11T17:33:10.278560Z",
+      "description": "R\u00f8dt kort Odd: Odin Luraas Bj\u00f8rtuft.",
+      "duration_ms": 14000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Odd: Odin Luraas Bj\u00f8rtuft.",
+          "from_timestamp": 2558000,
+          "id": 120665,
+          "recording_timestamp": "2022-05-11T17:32:37.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1520,
+                "type": "player",
+                "value": "Odin Luraas Bj\u00f8rtuft"
+              },
+              "team": { "id": 5, "type": "team", "value": "Odd" }
+            }
+          ],
+          "to_timestamp": 2572000,
+          "video_asset_id": 5718,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5718"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/a9830bb1kawca",
+      "game": {
+        "attendance": 0,
+        "date": "2022-05-11",
+        "end_of_1st_half": "2022-05-11T17:46:19.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-05-11T18:49:14.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-05-11T18:49:14.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 15,
+          "import_id": 3,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Molde-molde.png",
+          "name": "Molde",
+          "short_name": "MOL"
+        },
+        "home_team_goals": 3,
+        "id": 3315,
+        "import_id": "7962838",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-05-11T20:00:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 18,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-05-11T17:00:09.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-05-11T18:01:11.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-05-11T17:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 5,
+          "import_id": 270,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Odd-ODD_logo.png",
+          "name": "Odd",
+          "short_name": "ODD"
+        },
+        "visiting_team_goals": 0
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5718/02568.jpg",
+      "id": "a9830bb1kawca",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/a9830bb1kawca",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-05-11T19:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/5718/02568.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/5718:2558000:2572000/Manifest.m3u8",
+      "view_count": 33
+    },
+    {
+      "creator": {
+        "id": "axulltid150bh",
+        "name": "tags-video",
+        "profile_image": null
+      },
+      "date": "2022-05-07T17:19:06.391375Z",
+      "description": "R\u00f8dt kort Molde: Benjamin Tiedemann Hansen.",
+      "duration_ms": 25000,
+      "events": [
+        {
+          "content_source": "Mediabank",
+          "description": "R\u00f8dt kort Molde: Benjamin Tiedemann Hansen.",
+          "from_timestamp": 5304000,
+          "id": 119949,
+          "recording_timestamp": "2022-05-07T17:18:22.000000Z",
+          "tags": [
+            {
+              "action": "red card",
+              "player": {
+                "id": 1799,
+                "type": "player",
+                "value": "Benjamin Tiedemann Hansen"
+              },
+              "team": { "id": 15, "type": "team", "value": "Molde" }
+            }
+          ],
+          "to_timestamp": 5329000,
+          "video_asset_id": 4489,
+          "video_asset_name": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/4489"
+        }
+      ],
+      "frontend_url": "https://highlights.eliteserien.no/playlist/aeg3f6xynklo6",
+      "game": {
+        "attendance": 0,
+        "date": "2022-05-07",
+        "end_of_1st_half": "2022-05-07T16:46:52.000000Z",
+        "end_of_1st_overtime": null,
+        "end_of_2nd_half": "2022-05-07T17:53:38.000000Z",
+        "end_of_2nd_overtime": null,
+        "everysport_id": null,
+        "extra_referees": null,
+        "finished_time": "2022-05-07T17:53:38.000000Z",
+        "home_team": {
+          "coach": null,
+          "id": 15,
+          "import_id": 3,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/tippeligaen/Molde-molde.png",
+          "name": "Molde",
+          "short_name": "MOL"
+        },
+        "home_team_goals": 3,
+        "id": 3211,
+        "import_id": "7962735",
+        "import_source": "FIKS",
+        "is_available_publicly": true,
+        "officially_closed": false,
+        "phase": "finished",
+        "public_release_timestamp": "2022-05-07T19:00:00.000000Z",
+        "referee_external_id": null,
+        "referee_name": null,
+        "round": 5,
+        "stadium_name": null,
+        "start_of_1st_half": "2022-05-07T16:00:47.000000Z",
+        "start_of_1st_overtime": null,
+        "start_of_2nd_half": "2022-05-07T17:02:37.000000Z",
+        "start_of_2nd_overtime": null,
+        "start_of_penalties": null,
+        "start_time": "2022-05-07T16:00:00.000000Z",
+        "stop_periods": [],
+        "tournament": {
+          "id": 13,
+          "league_name": "eliteserien",
+          "name": "2022"
+        },
+        "tournament_id": 13,
+        "tournament_name": "Eliteserien",
+        "visiting_team": {
+          "coach": null,
+          "id": 2,
+          "import_id": 198,
+          "import_source": "FIKS",
+          "logo_url": "https://cdn.forzasys.com/team-logos/forzify-backend-eliteserien/Viking-Viking_Logo_RGB.png",
+          "name": "Viking",
+          "short_name": "VIK"
+        },
+        "visiting_team_goals": 4
+      },
+      "hd_thumbnail_override_url": null,
+      "hd_thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/4489/05314.jpg",
+      "id": "aeg3f6xynklo6",
+      "is_accessible": true,
+      "is_available_publicly": true,
+      "is_live": false,
+      "is_placeholder": false,
+      "is_private": false,
+      "minified_frontend_url": "http://highlights.eliteserien.no/webview/playlist/aeg3f6xynklo6",
+      "postrolls": [],
+      "prerolls": [],
+      "public_release_timestamp": "2022-05-07T18:20:00.000000Z",
+      "rating": 1,
+      "thumbnail_override_url": null,
+      "thumbnail_url": "https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/4489/05314.jpg",
+      "usergroups_view": [],
+      "video_url": "https://api.forzasys.com/eliteserien/playlist.m3u8/4489:5304000:5329000/Manifest.m3u8",
+      "view_count": 48
+    }
+  ],
+  "total": 24
+}

@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +14,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="/output.css" rel="stylesheet"/>
       </Head>
-
       <main>
 
         <h1 className="text-5xl text-black font-semibold">Poll title</h1>
@@ -145,7 +143,6 @@ export default function Home() {
         </div>
         </div>
         </div>
-      </main>
     </>
   );
 }

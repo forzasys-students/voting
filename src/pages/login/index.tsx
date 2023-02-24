@@ -1,11 +1,31 @@
+import { signIn } from "next-auth/react";
+import { FormEventHandler } from "react";
+
+interface FormElements extends HTMLFormControlsCollection {
+  username: HTMLInputElement;
+  password: HTMLInputElement;
+}
+
+interface UsernameFormElement extends HTMLFormElement {
+  readonly elements: FormElements;
+}
+
 export default function Login() {
-  const handleFormSubmit = (e: any) => {
+  const handleFormSubmit = async (e: React.FormEvent<UsernameFormElement>) => {
     e.preventDefault();
 
-    let username = e.target.elements.username?.value;
-    let password = e.target.elements.password?.value;
+    let username = e.currentTarget.elements.username.value;
+    let password = e.currentTarget.password.value;
 
     console.log(username, password);
+
+    const response = await signIn("credentials", {
+      username,
+      password,
+      redirect: false,
+    });
+
+    console.log(response);
   };
   return (
     <div className="flex bg-gray-bg1">
@@ -22,6 +42,7 @@ export default function Login() {
               className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
               id="username"
               placeholder="Ditt brukernavn"
+              defaultValue="test"
             />
           </div>
           <div>
@@ -31,6 +52,7 @@ export default function Login() {
               className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
               id="password"
               placeholder="Ditt passord"
+              defaultValue="test"
             />
           </div>
 

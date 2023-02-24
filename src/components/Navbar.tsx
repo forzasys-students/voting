@@ -12,7 +12,7 @@ export default function Navbar() {
   );
 
   return (
-    <header className="bg-[#10253E] h-36 mb-5 static">
+    <header className="bg-[#10253E] lg:h-36 mb-5 static">
       <div className="right-0">
         <div>
           <Link
@@ -23,7 +23,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/"
-            className="text-right mb-2 p-2 text-lg text-white hover:bg-white hover:text-black right-40 mr-16 font-medium cursor-pointer absolute"
+            className="text-right mb-2 p-2 text-lg text-white hover:bg-white hover:text-black right-40 mr-24 font-medium cursor-pointer absolute"
           >
             Bytt til tidligere avstemmninger
           </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
       <Link href="/">
         <Image
           src="/elite-logo.svg"
-          className="w-32 h-32 mr-10"
+          className="w-32 h-32 ml-40"
           alt="Eliteserie Logo"
           width={32}
           height={32}

@@ -27,11 +27,17 @@ export default function Login() {
       redirect: false,
     });
 
-    if (response?.ok) {
-      toast.success("Du er nå logget inn!");
-      router.push("/admin");
-    } else {
-      toast.error("Noe gikk galt, prøv igjen.");
+    switch (response?.status) {
+      case 401:
+        toast.error("Feil brukernavn eller passord");
+        break;
+      case 200:
+        toast.success("Du er nå logget inn!");
+        router.push("/admin");
+
+        break;
+      default:
+        toast.error("Noe gikk galt, prøv igjen.");
     }
   };
   return (
@@ -68,7 +74,7 @@ export default function Login() {
           <div className="mt-1">
             <button
               disabled={!username || !password}
-              className="bg-green py-2 px-4 text-sm text-primary rounded border border-green focus:outline-none focus:border-green-dark enabled:hover:bg-blue-900 enabled:hover:text-white disabled:opacity-50"
+              className="flex bg-green py-2 px-4 text-sm text-primary rounded border border-green focus:outline-none focus:border-green-dark enabled:hover:bg-blue-900 enabled:hover:text-white disabled:opacity-50"
             >
               Logg inn
             </button>

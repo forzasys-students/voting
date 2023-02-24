@@ -27,6 +27,7 @@ model Poll {
   creator     User         @relation(fields: [creatorId], references: [id])
   created     DateTime     @default(now())
   options     PollOption[]
+  Vote        Vote[]
 
   @@map(name: "polls")
 }
@@ -36,8 +37,20 @@ model PollOption {
   pollId  Int
   poll    Poll     @relation(fields: [pollId], references: [id])
   option  String
-  votes   Int      @default(0)
   created DateTime @default(now())
+  Vote    Vote[]
 
   @@map(name: "poll_options")
+}
+
+model Vote {
+  id         Int        @id @default(autoincrement())
+  pollId     Int
+  poll       Poll       @relation(fields: [pollId], references: [id])
+  optionId   Int
+  option     PollOption @relation(fields: [optionId], references: [id])
+  ip_address String
+  created    DateTime   @default(now())
+
+  @@map(name: "votes")
 }

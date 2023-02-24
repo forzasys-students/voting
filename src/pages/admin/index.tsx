@@ -3,6 +3,7 @@ import Head from "next/head";
 import type { Response } from "@/types/matchdata";
 import { useSession } from "next-auth/react";
 import { useQuery } from "@tanstack/react-query";
+import { signOut } from "next-auth/react";
 
 const getMatchData = async () => {
   const response = await fetch("/api/matchdata");
@@ -30,6 +31,14 @@ export default function Admin() {
       <Head>
         <title>Admin</title>
       </Head>
+
+      <button
+        className="bg-blue-300 hover:bg-blue-400 p-2 rounded-md"
+        onClick={() => signOut({ redirect: true, callbackUrl: "/login" })}
+      >
+        Logg ut
+      </button>
+
       <h3 className="text-2xl font-bold">Hendelser</h3>
       {matchData.data.playlists.map((event) => {
         return (

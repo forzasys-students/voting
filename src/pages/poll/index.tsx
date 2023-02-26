@@ -25,7 +25,7 @@ export default function Poll() {
       </div>
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
         <div className="bg-[#f2f2f2] flex lg:h-80 md:h-60 sm:h-52 h-44 lg:w-96 md:w-72 sm:w-60 w-56 relative">
-          <div className="absolute bg-sky-400 lg:h-80 md:h-80 sm:h-60 h-44 overflow-hidden" style={{width:384*progress}}>
+          <div className="absolute bg-sky-400 lg:h-80 md:h-60 sm:h-60 h-44 overflow-hidden" style={{width:384*progress}}>
             <p className="text-sky-400">Secret text</p>
           </div>
           <video controls className="lg:w-full absolute"></video>
@@ -47,7 +47,7 @@ export default function Poll() {
           </div>
         </div>
         <div className="bg-[#f2f2f2] flex lg:h-80 md:h-60 sm:h-52 h-44 lg:w-96 md:w-72 sm:w-60 w-56 relative">
-          <div className="absolute bg-sky-400 lg:h-80 md:h-80 sm:h-60 h-44 overflow-hidden" style={{width:384*progress}}>
+          <div className="absolute bg-sky-400 lg:h-80 md:h-60 sm:h-60 h-44 overflow-hidden" style={{width:384*progress}}>
             <p className="text-sky-400">Secret text</p>
           </div>
           <video controls className="lg:w-full absolute"></video>
@@ -69,7 +69,7 @@ export default function Poll() {
           </div>
         </div>
         <div className="bg-[#f2f2f2] flex lg:h-80 md:h-60 sm:h-52 h-44 lg:w-96 md:w-72 sm:w-60 w-56 relative">
-          <div className="absolute bg-sky-400 lg:h-80 md:h-80 sm:h-60 h-44 overflow-hidden" style={{width:384*progress}}>
+          <div className="absolute bg-sky-400 lg:h-80 md:h-60 sm:h-60 h-44 overflow-hidden" style={{width:384*progress}}>
             <p className="text-sky-400">Secret text</p>
           </div>
           <video controls className="lg:w-full absolute"></video>

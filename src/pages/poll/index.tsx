@@ -5,25 +5,27 @@ export default function Poll() {
     id: 1,
     title: "Poll Title",
     description: "Poll Flavor Text",
-    votes: 10,
+    votes: 100,
   });
 
   const [totalVotes] = useState(100);
 
   const precent = data.votes / totalVotes;
 
+  const progress = precent / 100;
+  
   // width: ${precent * 100}%;
 
   return (
     <>
       <div>
         <h1 className="font-semibold text-6xl">{data.title}</h1>
-        <h2 className="font-regular text-xl">{data.description}</h2>
+        <h2 className="font-regular text-xl h-20">{data.description}</h2>
         <p className="font-light">{data.votes} votes</p>
       </div>
       <div>
         <div className="bg-[#f2f2f2] flex lg:h-80 md:h-60 sm:h-52 h-44 lg:w-96 md:w-72 sm:w-60 w-56 relative">
-          <div className="absolute bg-sky-400 w-11/12 lg:h-80 md:h-80 sm:h-60 h-44 overflow-hidden">
+          <div className="absolute bg-sky-400 lg:h-80 md:h-80 sm:h-60 h-44 overflow-hidden" style={{width:384*progress}}>
             <p className="text-sky-400">Secret text</p>
           </div>
           <video controls className="lg:w-full absolute"></video>

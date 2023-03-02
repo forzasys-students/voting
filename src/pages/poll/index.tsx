@@ -20,8 +20,8 @@ export default function Poll() {
   return (
     <>
       <div>
-        <h1 className="font-semibold lg:text-6xl md:text-5xl sm:text-4xl text-3xl">{data.title}</h1>
-        <h2 className="font-regular lg:text-xl md:text-lg sm:text-base text-sm lg:h-20 md:h-16 sm:h-14 h-12">{data.description}</h2>
+        <h1 className="font-bold lg:text-6xl md:text-5xl sm:text-4xl text-3xl">{data.title}</h1>
+        <h2 className="font-medium lg:text-xl md:text-lg sm:text-base text-sm lg:h-20 md:h-16 sm:h-14 h-12">{data.description}</h2>
         <p className="font-light">{data.votes} votes</p>
       </div>
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6">

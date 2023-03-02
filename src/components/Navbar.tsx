@@ -23,7 +23,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/"
-            className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black lg:right-40 md:right-24 sm:right-10 right-8 sm:mr-24 mr-20 font-medium cursor-pointer absolute"
+            className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black lg:right-56 md:right-24 sm:right-10 right-8 sm:mr-6 mr-20 font-medium cursor-pointer absolute"
           >
             Bytt til tidligere avstemmninger
           </Link>

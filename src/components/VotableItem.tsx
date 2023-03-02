@@ -33,7 +33,7 @@ export default function Poll() {
             <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">{data.videoLength.toLocaleString()}</p>
           </div>
           <div className="w-full">
-            <p className="font-medium lg:text-xl md:text-base sm:text-sm text-sm">{data.videoTitle.toLocaleString()}</p>
+            <p className="font-semibold lg:text-xl md:text-base sm:text-sm text-sm">{data.videoTitle.toLocaleString()}</p>
           </div>
           <div>
             <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">{data.videoOrigin.toLocaleString()}</p>

@@ -73,5 +73,6 @@ export default function Poll() {
         </div>
       </div>
     </div>
+  </div>
   );
 }

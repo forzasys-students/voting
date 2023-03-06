@@ -99,7 +99,7 @@ export interface Game {
 
 export interface Playlist {
   creator: Creator;
-  date: Date;
+  date: string;
   description: string;
   duration_ms: number;
   events: Event[];

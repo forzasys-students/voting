@@ -32,15 +32,6 @@ export default function Poll() {
         <div className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden" style={{width:384*progress}}>
           <p className="text-sky-400">Secret text</p>
         </div>
-        <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
-          <div className="flex">
-            <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">{data.eventDate.toLocaleString()}</p>
-            <p className="mr-2 ml-2 font-normal lg:text-base md:text-sm sm:text-xs text-xs"> | </p>
-            <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">{data.videoLength.toLocaleString()}</p>
-          </div>
-          <div className="w-full">
-            <p className="font-semibold lg:text-xl md:text-base sm:text-sm text-sm">{data.videoTitle.toLocaleString()}</p>
-          </div>
           <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
             <div className="flex">
               <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
@@ -70,7 +61,6 @@ export default function Poll() {
           <p className="lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium">
             {(data.votes / totalVotes).toFixed(0)}%
           </p>
-        </div>
       </div>
     </div>
   </div>

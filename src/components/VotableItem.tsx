@@ -18,10 +18,14 @@ export default function Poll() {
   
     const progress = precent / 100;
 
+    function myVote(){
+      alert("I work");
+    }
+
   return (
     <div>
     <video controls className="aspect-video w-full"></video>
-    <div className="bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg">
+    <div className="bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg" onClick={myVote}>
       <div className="col-span-4">
         <div className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden" style={{width:384*progress}}>
           <p className="text-sky-400">Secret text</p>

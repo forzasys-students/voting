@@ -4,23 +4,23 @@ import type { Response } from "@/types/matchdata";
 import { useSession } from "next-auth/react";
 import { useQuery } from "@tanstack/react-query";
 import { signOut } from "next-auth/react";
+import Link from "next/link";
+import { Poll } from "@prisma/client";
+import { InferGetServerSidePropsType } from "next";
 
-const getMatchData = async () => {
-  const response = await fetch("/api/matchdata");
-  const data = await response.json();
+export const getServerSideProps = async () => {
+  const polls = await prisma.poll.findMany();
 
-  return data;
+  // Error when parsing date, temp fix
+  const test = JSON.parse(JSON.stringify(polls)) as Poll[];
+
+  return { props: { polls: test } };
 };
 
-export default function Admin() {
+export default function Admin({
+  polls,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const session = useSession();
-
-  const matchData = useQuery<Response>({
-    queryKey: ["matchData"],
-    queryFn: getMatchData,
-    initialData: { playlists: [], total: 0 },
-    enabled: session.status === "authenticated",
-  });
 
   if (session.status !== "authenticated") {
     return <h1>Logg inn</h1>;
@@ -32,24 +32,33 @@ export default function Admin() {
         <title>Admin</title>
       </Head>
 
-      <button
-        className="bg-blue-300 hover:bg-blue-400 p-2 rounded-md"
-        onClick={() => signOut({ redirect: true, callbackUrl: "/login" })}
-      >
-        Logg ut
-      </button>
+      <div className="flex flex-row flex-wrap gap-1 mb-2">
+        <button
+          className="bg-gray-200 hover:bg-gray-300 p-3"
+          onClick={() => signOut({ redirect: true, callbackUrl: "/login" })}
+        >
+          Logg ut
+        </button>
 
-      <h3 className="text-2xl font-bold">Hendelser</h3>
-      {matchData.data.playlists.map((event) => {
-        return (
-          <div key={event.id} className="py-2">
-            <h4 className="text-1xl">{event.description}</h4>
-            <p className="text-gray-400">
-              {new Date(event.date).toLocaleString()}
-            </p>
-          </div>
-        );
-      })}
+        <Link href="/admin/avstemning">
+          <button className="bg-gray-200 hover:bg-gray-300 p-3">
+            Lag ny avstemning
+          </button>
+        </Link>
+      </div>
+
+      <h3 className="text-2xl font-bold">Avstemninger</h3>
+      {polls &&
+        polls.map((poll) => {
+          return (
+            <div key={poll.id} className="py-2">
+              <h4 className="text-1xl">{poll.title}</h4>
+              <p className="text-gray-400">
+                {poll.description} | {new Date(poll.created).toLocaleString()}
+              </p>
+            </div>
+          );
+        })}
     </>
   );
 }

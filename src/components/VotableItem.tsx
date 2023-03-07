@@ -27,10 +27,12 @@ export default function Poll() {
   <div>
     <ReactPlayer 
       controls 
+      playing
       width={'auto'} 
       height={'auto'} 
+      light={'https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/6115/05199.jpg'}
       url={'https://api.forzasys.com/eliteserien/playlist.m3u8/6115:5189000:5214000/Manifest.m3u8'}
-    ></ReactPlayer>{/*light={'https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/6115/05199.jpg'} for thumbnail, but height doesn't seem to be displayed correct and Hydration fails*/}
+    ></ReactPlayer>
     {/*<video controls className="aspect-video w-full" poster="https://d22hh18o76pkhl.cloudfront.net/mediabank/thumb/eliteserien/6115/05199.jpg">
       <source src="https://api.forzasys.com/eliteserien/playlist.m3u8/6115:5189000:5214000/Manifest.m3u8" type="application/x-mpegURL"></source>
     </video>*/}

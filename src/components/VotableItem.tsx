@@ -28,10 +28,10 @@ export default function Poll() {
       <source src="https://api.forzasys.com/eliteserien/playlist.m3u8/6115:5189000:5214000/Manifest.m3u8" type="application/x-mpegURL"></source>
     </video>
     <div className="bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg" onClick={myVote}>
-      <div className="col-span-4">
-        <div className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden" style={{width:384*progress}}>
+      <div className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden" style={{width:384*progress}}>
           <p className="text-sky-400">Secret text</p>
-        </div>
+      </div>
+      <div className="col-span-4">
           <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
             <div className="flex">
               <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">

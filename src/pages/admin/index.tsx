@@ -54,7 +54,7 @@ export default function Admin({
             <div key={poll.id} className="py-2">
               <h4 className="text-1xl">{poll.title}</h4>
               <p className="text-gray-400">
-                {poll.description} | {new Date(poll.created).toLocaleString()}
+                {poll.description} | {new Date(poll.date).toLocaleString()}
               </p>
             </div>
           );

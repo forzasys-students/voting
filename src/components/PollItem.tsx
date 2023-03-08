@@ -7,11 +7,7 @@ export default function PollItem({ children }: any) {
     id: 1,
     title: "Kampens beste skåring!",
     description:
-<<<<<<< HEAD
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit nulla ornare luctus dictum.",
-=======
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit nulla ornare luctus dictum. Curabitur in tellus nec dui congue porta. Vivamus convallis id quam ut iaculis. Morbi tortor lacus, aliquet vitae rutrum a, hendrerit at nisl. Phasellus suscipit auctor ligula vitae vestibulum. Maecenas quis pellentesque magna. Donec semper diam eget facilisis gravida. Aliquam erat volutpat. Phasellus nec elementum nibh. Praesent id imperdiet arcu, quis fringilla lectus.",
->>>>>>> 054befb85815ed74471a0ea025c7187bb25ad314
     date: new Date(),
     votes: 200,
     thumbnail_url:
@@ -28,10 +24,10 @@ export default function PollItem({ children }: any) {
         />
         <div className="bg-black">
           <div className="absolute top-0 text-white bg-[#10253E] bg-opacity-70 rounded-br-lg">
-            {data.date.toLocaleString()} 
+            {data.date.toLocaleString()}
           </div>
           <div className="absolute top-0 right-0 text-white bg-[#10253E] bg-opacity-70 rounded-bl-lg">
-          {data.votes} votes
+            {data.votes} votes
           </div>
           <div className="absolute bottom-16 text-[#10253E] bg-slate-200 bg-opacity-50 font-semibold rounded-r-lg">
             {data.title}
@@ -42,5 +38,5 @@ export default function PollItem({ children }: any) {
         </div>
       </div>
     </Link>
-  )
+  );
 }

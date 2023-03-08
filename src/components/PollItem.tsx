@@ -7,7 +7,11 @@ export default function PollItem({ children }: any) {
     id: 1,
     title: "Kampens beste skåring!",
     description:
+<<<<<<< HEAD
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit nulla ornare luctus dictum.",
+=======
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit nulla ornare luctus dictum. Curabitur in tellus nec dui congue porta. Vivamus convallis id quam ut iaculis. Morbi tortor lacus, aliquet vitae rutrum a, hendrerit at nisl. Phasellus suscipit auctor ligula vitae vestibulum. Maecenas quis pellentesque magna. Donec semper diam eget facilisis gravida. Aliquam erat volutpat. Phasellus nec elementum nibh. Praesent id imperdiet arcu, quis fringilla lectus.",
+>>>>>>> 054befb85815ed74471a0ea025c7187bb25ad314
     date: new Date(),
     votes: 200,
     thumbnail_url:
@@ -36,8 +40,6 @@ export default function PollItem({ children }: any) {
             {data.description}
           </div>
         </div>
-        
-        
       </div>
     </Link>
   )

@@ -12,7 +12,7 @@ export default function Navbar() {
   );
 
   return (
-    <header className="bg-[#10253E] lg:h-36 md:h32 sm:h28 h-22 mb-5 static">
+    <header className="bg-[#10253E] lg:h-36 md:h32 sm:h28 h-22 mb-5 sm:content-end static">
       <div className="right-0">
         <div>
           <Link
@@ -23,13 +23,13 @@ export default function Navbar() {
           </Link>
           <Link
             href="/"
-            className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black lg:right-56 md:right-24 sm:right-10 right-8 sm:mr-6 mr-20 font-medium cursor-pointer absolute"
+            className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black lg:right-56 md:right-40 sm:right-24 right-8 sm:mr-6 mr-20 font-medium cursor-pointer absolute"
           >
             Bytt til tidligere avstemmninger
           </Link>
         </div>
         <Link
-          href="/overview"
+          href="/"
           className="bg-sky-400 text-white font-bold sm:py-2 py-1 sm:px-4 px-2 border-4 md:text-3xl sm:text-xl lg:right-40 md:right-24 sm:right-10 right-10 sm:top-12 top-8 cursor-pointer absolute"
         >
           ALLE AVSTEMMNINGER

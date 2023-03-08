@@ -1,17 +1,16 @@
 import VotableItem from "@/components/VotableItem";
+import { PollData } from "@/types/poll";
 import { useState } from "react";
 
-export default function Poll() {
-  const [data] = useState({
-    id: 1,
-    title: "Poll Title",
-    description: "Poll Flavor Text",
-    votes: 100,
-  });
+interface Props {
+  poll: PollData;
+}
 
+export default function Poll(props: Props) {
+  const [votes] = useState(100);
   const [totalVotes] = useState(100);
 
-  const precent = data.votes / totalVotes;
+  const precent = votes / totalVotes;
 
   const progress = precent / 100;
 
@@ -21,20 +20,18 @@ export default function Poll() {
     <>
       <div>
         <h1 className="font-bold lg:text-6xl md:text-5xl sm:text-4xl text-3xl">
-          {data.title}
+          {props.poll.title}
         </h1>
         <h2 className="font-medium lg:text-xl md:text-lg sm:text-base text-sm lg:h-20 md:h-16 sm:h-14 h-12">
-          {data.description}
+          {props.poll.description}
         </h2>
-        <p className="font-light">{data.votes} votes</p>
+        <p className="font-light">{votes} votes</p>
       </div>
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
-        <VotableItem></VotableItem>
-        <VotableItem></VotableItem>
-        <VotableItem></VotableItem>
-        <VotableItem></VotableItem>
-        <VotableItem></VotableItem>
-        <VotableItem></VotableItem>
+        {props.poll &&
+          props.poll.options.map((pollOption) => {
+            return <VotableItem key={pollOption.id} pollOption={pollOption} />;
+          })}
       </div>
     </>
   );

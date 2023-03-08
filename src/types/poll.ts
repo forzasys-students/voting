@@ -1,8 +1,5 @@
-export interface PollOption {
-  id: string;
-  date: string;
-  description: string;
+import { Poll, PollOption } from "@prisma/client";
 
-  video_url: string;
-  thumbnail_url: string;
-}
+export type PollData = Poll & {
+  options: PollOption[];
+};

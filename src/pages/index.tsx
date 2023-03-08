@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
+import PollItem from "@/components/PollItem";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,94 +16,17 @@ export default function Home() {
         <link href="/output.css" rel="stylesheet" />
       </Head>
       <main>
-        <h1 className="text-5xl text-black font-semibold">Poll title</h1>
-        <h2 className="text-2xl text-black">Poll description</h2>
-        <br></br>
-        <h3 className="text-xl text-black">
-          Current vote count: <span className="text-4xl">x</span>
-        </h3>
+        <h1 className="text-5xl text-black font-semibold">Aktive polls</h1>
+          <br></br>
 
-        {/*Note: adjust to small screen*/}
-        <div className="w-full space-y-5">
-          {/*Video 1*/}
-          <div className="w-auto shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="align-top text-small text-neutral-500">
-                event date | video length
-              </div>
-              <div className="align-middle text-black font-semibold">
-                Video title
-              </div>
-              <div className="align-bottom text-small text-neutral-500">
-                Video origin
-              </div>
-            </div>
-          </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+          <PollItem></PollItem>
+          <PollItem></PollItem>
+          <PollItem></PollItem>
+          <PollItem></PollItem>
+          <PollItem></PollItem>
+          <PollItem></PollItem>
 
-          {/*Video 2*/}
-          <div className="w-full shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="mb-1 w-1/1 align-top text-small text-neutral-500">
-                event date | video length
-              </div>
-              <div className="w-1/1 align-middle text-black font-semibold">
-                Video title
-              </div>
-              <div className="w-1/1 align-bottom text-small text-neutral-500">
-                Video origin
-              </div>
-            </div>
-          </div>
-
-          {/*Video 3*/}
-          <div className="w-full shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="align-top text-small text-neutral-500">
-                event date | video length
-              </div>
-              <div className="align-middle text-black font-semibold">
-                Video title
-              </div>
-              <div className="align-bottom text-small text-neutral-500">
-                Video origin
-              </div>
-            </div>
-          </div>
-
-          {/*Video 4*/}
-          <div className="w-full shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="mb-1 w-1/1 align-top text-small text-neutral-500">
-                event date | video length
-              </div>
-              <div className="w-1/1 align-middle text-black font-semibold">
-                Video title
-              </div>
-              <div className="w-1/1 align-bottom text-small text-neutral-500">
-                Video origin
-              </div>
-            </div>
-          </div>
-
-          {/*Video 5*/}
-          <div className="w-full shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-            <div className="space-x-4 space-y-8">
-              <div className="mb-1 w-1/1 align-top text-small text-neutral-500">
-                event date | video length
-              </div>
-              <div className="w-1/1 align-middle text-black font-semibold">
-                Video title
-              </div>
-              <div className="w-1/1 align-bottom text-small text-neutral-500">
-                Video origin
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </>

@@ -7,7 +7,11 @@ export default function PollItem({ children }: any) {
     id: 1,
     title: "Kampens beste skåring!",
     description:
+<<<<<<< HEAD
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit nulla ornare luctus dictum.",
+=======
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit nulla ornare luctus dictum. Curabitur in tellus nec dui congue porta. Vivamus convallis id quam ut iaculis. Morbi tortor lacus, aliquet vitae rutrum a, hendrerit at nisl. Phasellus suscipit auctor ligula vitae vestibulum. Maecenas quis pellentesque magna. Donec semper diam eget facilisis gravida. Aliquam erat volutpat. Phasellus nec elementum nibh. Praesent id imperdiet arcu, quis fringilla lectus.",
+>>>>>>> 054befb85815ed74471a0ea025c7187bb25ad314
     date: new Date(),
     votes: 200,
     thumbnail_url:
@@ -16,26 +20,27 @@ export default function PollItem({ children }: any) {
 
   return (
     <Link href={`/poll/${data.id}`}>
-      <div className="w-auto shadow-lg bg-neutral-100 flex mb-3">
+      <div className="relative mb-3 hover:shadow-xl">
         <img
+          className="bg-black"
           src={data.thumbnail_url}
-          className="box-content lg:h-60 lg:w-1/4 sm:w-1/3 hover:box-content bg-black"
           alt="Poll thumbnail"
-          width={300}
-          height={200}
         />
-        <div className="w-3/4 space-x-4 space-y-8 m-2">
-          <div className="align-top text-small text-neutral-500">
-            {data.date.toLocaleString()} | {data.votes} votes
+        <div className="bg-black">
+          <div className="absolute top-0 text-white bg-[#10253E] bg-opacity-70 rounded-br-lg">
+            {data.date.toLocaleString()} 
           </div>
-          <div className="align-middle text-black font-semibold">
+          <div className="absolute top-0 right-0 text-white bg-[#10253E] bg-opacity-70 rounded-bl-lg">
+          {data.votes} votes
+          </div>
+          <div className="absolute bottom-16 text-[#10253E] bg-slate-200 bg-opacity-50 font-semibold rounded-r-lg">
             {data.title}
           </div>
-          <div className="align-bottom text-small text-neutral-500">
+          <div className="absolute bottom-0 text-white bg-[#10253E] bg-opacity-40">
             {data.description}
           </div>
         </div>
       </div>
     </Link>
-  );
+  )
 }

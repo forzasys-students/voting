@@ -14,8 +14,6 @@ export const getServerSideProps = async () => {
 export default function Overview({
   polls,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  console.log(polls);
-
   return (
     <>
       <h2 className="text-3xl mb-5">Aktive polls</h2>

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ReactPlayer from "react-player";
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Poll() {
   const [data] = useState({
@@ -44,24 +45,24 @@ export default function Poll() {
           <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
             <div className="flex">
               <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                {data.eventDate.toLocaleString()}
+                {data.eventDate.toString()}
               </p>
               <p className="mr-2 ml-2 font-normal lg:text-base md:text-sm sm:text-xs text-xs">
                 {" "}
                 |{" "}
               </p>
               <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                {data.videoLength.toLocaleString()}
+                {data.videoLength.toString()}
               </p>
             </div>
             <div className="w-full">
               <p className="font-semibold lg:text-xl md:text-base sm:text-sm text-sm">
-                {data.videoTitle.toLocaleString()}
+                {data.videoTitle.toString()}
               </p>
             </div>
             <div>
               <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                {data.videoOrigin.toLocaleString()}
+                {data.videoOrigin.toString()}
               </p>
             </div>
           </div>

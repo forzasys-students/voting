@@ -24,7 +24,7 @@ export default function PollItem({ children }: any) {
         />
         <div className="bg-black">
           <div className="absolute top-0 text-white bg-[#10253E] bg-opacity-70 rounded-br-lg">
-            {data.date.toLocaleString()}
+            {data.date.toString()}
           </div>
           <div className="absolute top-0 right-0 text-white bg-[#10253E] bg-opacity-70 rounded-bl-lg">
             {data.votes} votes

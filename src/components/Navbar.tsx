@@ -27,12 +27,6 @@ export default function Navbar() {
           >
             Bytt til tidligere avstemmninger
           </Link>
-          <Link
-            href="/poll"
-            className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black font-medium cursor-pointer absolute"
-          >
-            Poll
-          </Link>
         </div>
         <Link
           href="/overview"

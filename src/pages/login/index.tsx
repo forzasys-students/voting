@@ -1,5 +1,7 @@
 import { signIn } from "next-auth/react";
-import { FormEventHandler } from "react";
+import { useRouter } from "next/router";
+import { FormEventHandler, useRef, useState } from "react";
+import toast from "react-hot-toast";
 
 interface FormElements extends HTMLFormControlsCollection {
   username: HTMLInputElement;
@@ -11,13 +13,13 @@ interface UsernameFormElement extends HTMLFormElement {
 }
 
 export default function Login() {
+  const router = useRouter();
+
+  const [username, setUsername] = useState("test");
+  const [password, setPassword] = useState("test");
+
   const handleFormSubmit = async (e: React.FormEvent<UsernameFormElement>) => {
     e.preventDefault();
-
-    let username = e.currentTarget.elements.username.value;
-    let password = e.currentTarget.password.value;
-
-    console.log(username, password);
 
     const response = await signIn("credentials", {
       username,
@@ -25,7 +27,18 @@ export default function Login() {
       redirect: false,
     });
 
-    console.log(response);
+    switch (response?.status) {
+      case 401:
+        toast.error("Feil brukernavn eller passord");
+        break;
+      case 200:
+        toast.success("Du er nå logget inn!");
+        router.push("/admin");
+
+        break;
+      default:
+        toast.error("Noe gikk galt, prøv igjen.");
+    }
   };
   return (
     <div className="flex bg-gray-bg1">
@@ -38,26 +51,31 @@ export default function Login() {
           <div>
             <label htmlFor="username">Brukernavn</label>
             <input
+              id="username"
               type="username"
               className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
-              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               placeholder="Ditt brukernavn"
-              defaultValue="test"
             />
           </div>
           <div>
             <label htmlFor="password">Passord</label>
             <input
-              type="password"
-              className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
               id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
               placeholder="Ditt passord"
-              defaultValue="test"
             />
           </div>
 
           <div className="mt-1">
-            <button className="bg-green py-2 px-4 text-sm text-primary rounded border border-green focus:outline-none focus:border-green-dark">
+            <button
+              disabled={!username || !password}
+              className="flex bg-green py-2 px-4 text-sm text-primary rounded border border-green focus:outline-none focus:border-green-dark enabled:hover:bg-blue-900 enabled:hover:text-white disabled:opacity-50"
+            >
               Logg inn
             </button>
           </div>

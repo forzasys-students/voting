@@ -11,9 +11,56 @@ datasource db {
 }
 
 model User {
-  id            Int    @id @default(autoincrement())
-  username      String @unique
-  password_hash String
+  id           Int    @id @default(autoincrement())
+  username     String @unique
+  passwordHash String
+  polls        Poll[]
 
   @@map(name: "users")
+}
+
+model Poll {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String
+  creatorId   Int
+  creator     User         @relation(fields: [creatorId], references: [id])
+  date        DateTime     @default(now())
+  options     PollOption[]
+  votes       Vote[]
+
+  @@map(name: "polls")
+}
+
+model PollOption {
+  id Int @id @default(autoincrement())
+
+  eventId      String
+  description  String
+  videoUrl     String
+  thumbnailUrl String
+
+  pollId Int
+  poll   Poll @relation(fields: [pollId], references: [id])
+
+  date DateTime @default(now())
+
+  votes Vote[]
+
+  @@map(name: "poll_options")
+}
+
+model Vote {
+  id Int @id @default(autoincrement())
+
+  pollId Int
+  poll   Poll @relation(fields: [pollId], references: [id])
+
+  optionId Int
+  option   PollOption @relation(fields: [optionId], references: [id])
+
+  ip_address String
+  date       DateTime @default(now())
+
+  @@map(name: "votes")
 }

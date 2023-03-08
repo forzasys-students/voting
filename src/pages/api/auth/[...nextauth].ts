@@ -16,6 +16,7 @@ export const authOptions: NextAuthOptions = {
         username: { label: "Username", type: "text" },
         password: { label: "Password", type: "password" },
       },
+
       async authorize(credentials, _req) {
         if (!credentials) {
           return null;
@@ -36,7 +37,7 @@ export const authOptions: NextAuthOptions = {
 
         // Verify the password with Argon2
         const valid = await Argon2.verify(
-          user.password_hash,
+          user.passwordHash,
           credentials.password
         );
 
@@ -46,12 +47,20 @@ export const authOptions: NextAuthOptions = {
         }
 
         // Return the user object
-        return { id: String(user.id), name: user.username };
+        return { id: String(user.id), name: user.username, userId: user.id };
       },
     }),
   ],
   pages: {
     signIn: "/login",
   },
+  callbacks: {
+    async session({ session, token }) {
+      session.user.userId = Number(token.sub);
+
+      return session;
+    },
+  },
 };
+
 export default NextAuth(authOptions);

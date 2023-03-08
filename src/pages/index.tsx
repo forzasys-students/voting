@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
+import PollItem from "@/components/PollItem";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,134 +16,19 @@ export default function Home() {
         <link href="/output.css" rel="stylesheet"/>
       </Head>
       <main>
+        <h1 className="text-5xl text-black font-semibold">Aktive polls</h1>
+          <br></br>
 
-        <h1 className="text-5xl text-black font-semibold">Poll title</h1>
-        <h2 className="text-2xl text-black">Poll description</h2>
-        <br></br>
-        <h3 className="text-xl text-black">Current vote count: <span className="text-4xl">x</span></h3>
-
-        {/*Note: adjust to small screen*/}
-        <div className="w-full space-y-5">
-          {/*Video 1*/}
-          <div className="w-auto shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-              <div className="space-x-4 space-y-8">
-                <div className="align-top text-small text-neutral-500">event date | video length</div>
-                <div className="align-middle text-black font-semibold">Video title</div>
-                <div className="align-bottom text-small text-neutral-500">Video origin</div>
-            </div>
-          </div>
-
-          {/*Video 2*/}
-          <div className="w-full shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-              <div className="space-x-4 space-y-8">
-                <div className="mb-1 w-1/1 align-top text-small text-neutral-500">event date | video length</div>
-                <div className="w-1/1 align-middle text-black font-semibold">Video title</div>
-                <div className="w-1/1 align-bottom text-small text-neutral-500">Video origin</div>
-            </div>
-          </div>
-          
-          {/*Video 3*/}
-          <div className="w-full shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-              <div className="space-x-4 space-y-8">
-                <div className="align-top text-small text-neutral-500">event date | video length</div>
-                <div className="align-middle text-black font-semibold">Video title</div>
-                <div className="align-bottom text-small text-neutral-500">Video origin</div>
-            </div>
-          </div>
-
-          {/*Video 4*/}
-          <div className="w-full shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-              <div className="space-x-4 space-y-8">
-                <div className="mb-1 w-1/1 align-top text-small text-neutral-500">event date | video length</div>
-                <div className="w-1/1 align-middle text-black font-semibold">Video title</div>
-                <div className="w-1/1 align-bottom text-small text-neutral-500">Video origin</div>
-            </div>
-          </div>
-
-          {/*Video 5*/}
-          <div className="w-full shadow-lg bg-neutral-100 flex">
-            <div className="box-content h-60 w-1/4 hover:box-content bg-black border-2"></div>
-              <div className="space-x-4 space-y-8">
-                <div className="mb-1 w-1/1 align-top text-small text-neutral-500">event date | video length</div>
-                <div className="w-1/1 align-middle text-black font-semibold">Video title</div>
-                <div className="w-1/1 align-bottom text-small text-neutral-500">Video origin</div>
-            </div>
-          </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+          <PollItem></PollItem>
+          <PollItem></PollItem>
+          <PollItem></PollItem>
+          <PollItem></PollItem>
+          <PollItem></PollItem>
+          <PollItem></PollItem>
         </div>
-      
-
-
-      {/* To be removed.
-      Kept for easy access.*/}
-      <br></br>
-      <div className="w-full space-y-5">
-          {/*Video 1*/}
-          <div className="w-full shadow-lg bg-neutral-800 flex">
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-        </div>
-        </div>
+      </main>
     </>
+    
   );
 }

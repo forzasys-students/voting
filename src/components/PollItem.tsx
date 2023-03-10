@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import Link from "next/link";
 import { PollData } from "@/types/poll";
@@ -18,16 +19,16 @@ export default function PollItem(props: Props) {
           alt="Poll thumbnail"
         />
         <div className="bg-black">
-          <div className="absolute top-0 text-white bg-[#10253E] bg-opacity-70 rounded-br-lg">
+          <div className="absolute top-0 text-lg text-white bg-[#10253E] bg-opacity-80 rounded-br-lg">
             08.03.2023
           </div>
-          <div className="absolute top-0 right-0 text-white bg-[#10253E] bg-opacity-70 rounded-bl-lg">
+          <div className="absolute top-0 right-0 text-lg text-white bg-[#10253E] bg-opacity-80 rounded-bl-lg">
             {votes} votes
           </div>
-          <div className="absolute bottom-16 text-[#10253E] bg-slate-200 bg-opacity-50 font-semibold rounded-r-lg">
+          <div className="absolute bottom-16 text-xl text-white bg-[#10253E] bg-opacity-80 font-semibold rounded-r-lg">
             {props.poll.title}
           </div>
-          <div className="absolute bottom-0 text-wrap text-white bg-[#10253E] bg-opacity-40">
+          <div className="absolute bottom-0 text-wrap text-lg text-white bg-[#10253E] bg-opacity-50">
             {props.poll.description}
           </div>
         </div>

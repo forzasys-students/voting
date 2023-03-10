@@ -75,6 +75,6 @@ export default async function handler(
 
     await prisma.poll.delete({ where: { id: poll.id } });
 
-    return res.status(200);
+    return res.status(200).send("OK");
   }
 }

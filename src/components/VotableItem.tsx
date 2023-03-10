@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +21,7 @@ export default function Poll(props: Props) {
     videoOrigin: "Oslo, Norway",
   });
 
-  const precent = props.votes / props.totalVotes;
+  const precent = (props.votes / props.totalVotes) * 100;
   const progress = precent / 100;
 
   const vote = useMutation(
@@ -39,7 +40,15 @@ export default function Poll(props: Props) {
       });
     },
     {
-      onSuccess: () => toast.success("Stemme registrert"),
+      onSuccess: () => {
+        toast.success("Stemme registrert");
+
+        // Store vote locally
+        localStorage.setItem(
+          `vote-${props.pollOption.pollId}`,
+          String(props.pollOption.id)
+        );
+      },
       onError: () => toast.error("Noe gikk galt"),
     }
   );
@@ -50,8 +59,21 @@ export default function Poll(props: Props) {
     }
   }
 
+  // TEMP
+  const votedId =
+    typeof window !== "undefined"
+      ? Number(localStorage.getItem(`vote-${props.pollOption.pollId}`)) ??
+        undefined
+      : undefined;
+
   return (
-    <div>
+    <div
+      className={
+        votedId
+          ? `brightness-${props.pollOption.id === votedId ? "100" : "75"}`
+          : undefined
+      }
+    >
       <ReactPlayer
         aspect
         controls
@@ -68,16 +90,18 @@ export default function Poll(props: Props) {
         url={props.pollOption.videoUrl}
       ></ReactPlayer>
       <div
-        className="bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg"
+        className={
+          "bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0"
+        }
         onClick={myVote}
       >
         <div
-          className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden"
+          className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10"
           style={{ width: 384 * progress }}
         >
           <p className="text-sky-400">Secret text</p>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-4 z-20">
           <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
             <div className="flex">
               <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
@@ -105,7 +129,9 @@ export default function Poll(props: Props) {
         </div>
         <div className="lg:mr-4 md:mr-4 sm:mr-3 mr-2 lg:mt-12 md:mt-10 sm:mt-9 mt-8">
           <p className="lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium">
-            {props.totalVotes ? (props.votes / props.totalVotes).toFixed(0) : 0}
+            {props.totalVotes
+              ? ((props.votes / props.totalVotes) * 100).toFixed(0)
+              : 0}
             %
           </p>
         </div>

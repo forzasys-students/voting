@@ -1,12 +1,19 @@
 import VotableItem from "@/components/VotableItem";
 import { PollData } from "@/types/poll";
+import { useMutation } from "@tanstack/react-query";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
+import toast from "react-hot-toast";
 
 interface Props {
   poll: PollData;
 }
 
 export default function Poll(props: Props) {
+  const session = useSession();
+  const router = useRouter();
+
   const { title, description, votes, options } = props.poll;
 
   const totalVotes = useMemo(() => votes.length, [votes]);
@@ -15,8 +22,32 @@ export default function Poll(props: Props) {
     return votes.filter((vote) => vote.optionId === optionId).length;
   };
 
+  const deletePoll = useMutation(
+    () => {
+      return fetch(`/api/poll/${props.poll.id}`, {
+        method: "DELETE",
+      });
+    },
+    {
+      onSuccess: () => {
+        toast.success("Avstemning slettet");
+        router.push("/admin");
+      },
+    }
+  );
+
   return (
     <>
+      {session.status === "authenticated" && (
+        <button
+          disabled={deletePoll.isLoading}
+          onClick={() => deletePoll.mutate()}
+          className="bg-gray-100 hover:bg-gray-200 p-3 mb-3"
+        >
+          Slett avstemning
+        </button>
+      )}
+
       <div>
         <h1 className="font-bold lg:text-6xl md:text-5xl sm:text-4xl text-3xl">
           {title}

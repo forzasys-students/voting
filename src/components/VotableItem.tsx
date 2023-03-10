@@ -101,7 +101,8 @@ export default function Poll(props: Props) {
         </div>
         <div className="lg:mr-4 md:mr-4 sm:mr-3 mr-2 lg:mt-12 md:mt-10 sm:mt-9 mt-8">
           <p className="lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium">
-            {(props.votes / props.totalVotes).toFixed(0)}%
+            {props.totalVotes ? (props.votes / props.totalVotes).toFixed(0) : 0}
+            %
           </p>
         </div>
       </div>

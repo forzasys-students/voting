@@ -24,6 +24,14 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <div className="relative w-fit left-1/4">
+          {polls &&
+            polls.map((poll) => {
+              return <PollItem key={poll.id} poll={poll}/>
+            })}
+          
+        </div>
+
         <h1 className="text-5xl text-black font-semibold">
           Aktive avstemninger
         </h1>

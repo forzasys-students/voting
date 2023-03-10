@@ -1,10 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import Z from "zod";
 
 import type { Response } from "@/types/matchdata";
 import { useSession } from "next-auth/react";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { PollOption } from "@/types/poll";
+import { pollOptionSchema, pollSchema } from "../api/poll";
+import { toast } from "react-hot-toast";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { Poll } from "@prisma/client";
 
 const getMatchData = async () => {
   const response = await fetch("/api/matchdata");
@@ -13,8 +19,12 @@ const getMatchData = async () => {
   return data;
 };
 
+type PollOption = Z.infer<typeof pollOptionSchema>;
+type PollCreation = Z.infer<typeof pollSchema>;
+
 export default function CreatePoll() {
   const session = useSession();
+  const router = useRouter();
 
   const matchData = useQuery<Response>({
     queryKey: ["matchData"],
@@ -27,6 +37,35 @@ export default function CreatePoll() {
   const [description, setDescription] = useState<string>("");
   const [events, setEvents] = useState<PollOption[]>([]);
 
+  const mutation = useMutation(
+    () => {
+      const data: PollCreation = {
+        title,
+        description,
+        options: events,
+      };
+
+      return fetch("/api/poll", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    },
+    {
+      onSuccess: async (response) => {
+        const data = (await response.json()) as Poll;
+
+        toast.success("Avstemning opprettet");
+        router.push(`/poll/${data.id}`);
+      },
+      onError: () => {
+        toast.error("Noe gikk galt");
+      },
+    }
+  );
+
   if (session.status !== "authenticated") {
     return <h1>Logg inn</h1>;
   }
@@ -37,6 +76,10 @@ export default function CreatePoll() {
         <title>Admin - Lag avstemning</title>
       </Head>
 
+      <Link href="/admin" className="underline">
+        <p className="mb-3">Tilbake til admin</p>
+      </Link>
+
       <h3 className="text-2xl font-bold ">Lag ny avstemning</h3>
 
       <form className="mt-3">
@@ -45,7 +88,7 @@ export default function CreatePoll() {
           <input
             id="title"
             type="title"
-            className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
+            className="w-full p-2 text-primary border border-gray-400 rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
             placeholder="Avstemning tittel"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -56,7 +99,7 @@ export default function CreatePoll() {
           <input
             id="description"
             type="description"
-            className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
+            className="w-full p-2 text-primary border border-gray-400 rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
             placeholder="Beskrivelse av avstemning"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -64,12 +107,16 @@ export default function CreatePoll() {
         </div>
 
         <div>
-          <label htmlFor="password">Hendelser</label>
+          <label htmlFor="password">Hendelser ({events.length} valgt)</label>
 
-          <div className="flex flex-row flex-wrap gap-2 mb-3">
-            {matchData.data.playlists.map((event) => {
+          <div className="flex flex-row flex-wrap gap-3 mb-3 mt-1">
+            {matchData.data.playlists.slice(0, 15).map((event) => {
               return (
-                <div key={event.id}>
+                <div
+                  key={event.id}
+                  className="select-none"
+                  style={{ width: "350px", height: "200px" }}
+                >
                   <input
                     type="checkbox"
                     id={`poll-option-${event.id}`}
@@ -77,11 +124,11 @@ export default function CreatePoll() {
                     className="hidden peer"
                     onChange={(e) => {
                       const pollOption: PollOption = {
-                        id: event.id,
+                        eventId: event.id,
                         date: event.date,
                         description: event.description,
-                        video_url: event.video_url,
-                        thumbnail_url: event.thumbnail_url,
+                        videoUrl: event.video_url,
+                        thumbnailUrl: event.thumbnail_url,
                       };
 
                       if (e.target.checked) {
@@ -89,7 +136,7 @@ export default function CreatePoll() {
                       } else {
                         setEvents(
                           events.filter(
-                            (pollOption) => pollOption.id !== event.id
+                            (pollOption) => pollOption.eventId !== event.id
                           )
                         );
                       }
@@ -97,10 +144,18 @@ export default function CreatePoll() {
                   />
                   <label
                     htmlFor={`poll-option-${event.id}`}
-                    className="inline-flex items-center justify-between p-3 bg-white border-2 border-gray-200 rounded-lg cursor-pointer  peer-checked:bg-blue-200   hover:bg-gray-100 text-gray-70"
+                    className="flex bg-white rounded-md cursor-pointer border-4 peer-checked:border-blue-500 hover:bg-gray-100 text-gray-70"
                   >
-                    <div className="block">
-                      <p className="text-sm">{event.description}</p>
+                    <div className="block relative">
+                      <img
+                        src={event.thumbnail_url}
+                        alt={event.description}
+                        className="w-full brightness-50"
+                        height="200"
+                      />
+                      <p className="text-lg absolute top-2 right-2 left-2 drop-shadow text-white font-bold">
+                        {event.description}
+                      </p>
                     </div>
                   </label>
                 </div>
@@ -109,21 +164,19 @@ export default function CreatePoll() {
           </div>
         </div>
 
-        <button className="flex bg-green py-3 px-4 text-sm text-primary rounded border border-green focus:outline-none focus:border-green-dark enabled:hover:bg-blue-900 enabled:hover:text-white disabled:opacity-50">
+        <button
+          className="flex bg-green py-3 px-4 text-sm text-primary rounded border border-gray-400 focus:outline-none focus:border-green-dark enabled:hover:bg-blue-900 enabled:hover:text-white disabled:opacity-50"
+          onClick={(e) => {
+            e.preventDefault();
+            mutation.mutate();
+          }}
+          disabled={
+            mutation.isLoading || events.length === 0 || !title || !description
+          }
+        >
           Lag avstemning
         </button>
       </form>
-
-      {/* {matchData.data.playlists.map((event) => {
-        return (
-          <div key={event.id} className="py-2">
-            <h4 className="text-1xl">{event.description}</h4>
-            <p className="text-gray-400">
-              {new Date(event.date).toLocaleString()}
-            </p>
-          </div>
-        );
-      })} */}
     </>
   );
 }

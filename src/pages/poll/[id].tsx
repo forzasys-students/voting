@@ -17,7 +17,7 @@ export const getServerSideProps = async (context: Context) => {
   if (!parsedId) return { props: { poll: null } };
 
   try {
-    const response = await fetch(`http://localhost:3000/api/poll/${id}`);
+    const response = await fetch(`${process.env.NEXTAUTH_URL}/api/poll/${id}`);
 
     const data = (await response.json()) as PollData;
 

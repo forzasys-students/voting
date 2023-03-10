@@ -56,13 +56,19 @@ export default function Poll(props: Props) {
         aspect
         controls
         playing
-        width={'auto'}
-        height={'auto'}
-        light={<img src={props.pollOption.thumbnailUrl} alt='Thumbnail' />}
+        width={"100%"}
+        height={"auto"}
+        light={
+          <img
+            src={props.pollOption.thumbnailUrl}
+            alt="Thumbnail"
+            className="w-full"
+          />
+        }
         url={props.pollOption.videoUrl}
       ></ReactPlayer>
       <div
-        className="bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-300 hover:shadow-lg"
+        className="bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg"
         onClick={myVote}
       >
         <div

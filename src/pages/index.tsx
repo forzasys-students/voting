@@ -6,7 +6,7 @@ import { PollData } from "@/types/poll";
 import { InferGetServerSidePropsType } from "next";
 
 export const getServerSideProps = async () => {
-  const response = await fetch("http://localhost:3000/api/poll");
+  const response = await fetch(`${process.env.NEXTAUTH_URL}/api/poll`);
   const data = (await response.json()) as PollData[];
 
   return { props: { polls: data } };
@@ -24,17 +24,10 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="relative w-fit left-1/4">
-          {polls &&
-            polls.map((poll) => {
-              return <PollItem key={poll.id} poll={poll}/>
-            })}
-          
-        </div>
-
         <h1 className="text-5xl text-black font-semibold">
           Aktive avstemninger
         </h1>
+
         <br></br>
 
         {polls.length === 0 && <p className="text-2xl">Ingen avstemninger</p>}

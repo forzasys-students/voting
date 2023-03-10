@@ -2,18 +2,18 @@ import { Poll } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSession } from "next-auth";
 import z, { ZodError } from "zod";
-import prisma from "../../../lib/prisma";
-import { authOptions } from "../auth/[...nextauth]";
+import prisma from "../../lib/prisma";
+import { authOptions } from "./auth/[...nextauth]";
 
-export const pollOptionSchema = z.object({
-  eventId: z.string(),
+const pollOptionSchema = z.object({
+  id: z.string(),
   date: z.string().datetime(),
   description: z.string(),
-  videoUrl: z.string().url(),
-  thumbnailUrl: z.string().url(),
+  video_url: z.string().url(),
+  thumbnail_url: z.string().url(),
 });
 
-export const pollSchema = z.object({
+const pollSchema = z.object({
   title: z.string(),
   description: z.string(),
   options: z.array(pollOptionSchema).min(1),
@@ -24,11 +24,7 @@ export default async function handler(
   res: NextApiResponse<string | ZodError | Poll | Poll[]>
 ) {
   if (req.method === "GET") {
-    const polls = await prisma.poll.findMany({
-      include: { options: true },
-      orderBy: { id: "desc" },
-    });
-
+    const polls = await prisma.poll.findMany({ include: { options: true } });
     return res.json(polls);
   }
 
@@ -62,10 +58,10 @@ export default async function handler(
     data: data.options.map((option) => ({
       date: new Date(option.date),
       description: option.description,
-      videoUrl: option.videoUrl,
-      thumbnailUrl: option.thumbnailUrl,
+      videoUrl: option.video_url,
+      thumbnailUrl: option.thumbnail_url,
       pollId: poll.id,
-      eventId: option.eventId,
+      eventId: option.id,
     })),
   });
 

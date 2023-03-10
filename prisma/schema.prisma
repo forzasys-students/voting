@@ -24,7 +24,7 @@ model Poll {
   title       String
   description String
   creatorId   Int
-  creator     User         @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+  creator     User         @relation(fields: [creatorId], references: [id])
   date        DateTime     @default(now())
   options     PollOption[]
   votes       Vote[]
@@ -41,7 +41,7 @@ model PollOption {
   thumbnailUrl String
 
   pollId Int
-  poll   Poll @relation(fields: [pollId], references: [id], onDelete: Cascade)
+  poll   Poll @relation(fields: [pollId], references: [id])
 
   date DateTime @default(now())
 
@@ -54,14 +54,13 @@ model Vote {
   id Int @id @default(autoincrement())
 
   pollId Int
-  poll   Poll @relation(fields: [pollId], references: [id], onDelete: Cascade)
+  poll   Poll @relation(fields: [pollId], references: [id])
 
   optionId Int
-  option   PollOption @relation(fields: [optionId], references: [id], onDelete: Cascade)
+  option   PollOption @relation(fields: [optionId], references: [id])
 
-  ipAddress String
-  userAgent String
-  date      DateTime @default(now())
+  ip_address String
+  date       DateTime @default(now())
 
   @@map(name: "votes")
 }

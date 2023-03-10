@@ -39,8 +39,8 @@ export default function Poll(props: Props) {
       });
     },
     {
-      onSuccess: () => toast.success("Vote registered"),
-      onError: () => toast.error("Vote failed"),
+      onSuccess: () => toast.success("Stemme registrert"),
+      onError: () => toast.error("Noe gikk galt"),
     }
   );
 

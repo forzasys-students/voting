@@ -3,30 +3,51 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { PollOption } from "@prisma/client";
+import { useMutation } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 interface Props {
   pollOption: PollOption;
+  votes: number;
+  totalVotes: number;
 }
 
 export default function Poll(props: Props) {
   const [data] = useState({
-    id: 1,
-    videoTitle: "Video Title",
-    votes: 100,
     eventDate: "◯◯.◯◯.◯◯◯◯",
     videoLength: "◯◯:◯◯",
     videoOrigin: "Oslo, Norway",
   });
 
-  const [votes] = useState(50);
-  const [totalVotes] = useState(100);
-
-  const precent = votes / totalVotes;
+  const precent = props.votes / props.totalVotes;
   const progress = precent / 100;
 
+  const vote = useMutation(
+    () => {
+      const data = {
+        pollId: props.pollOption.pollId,
+        optionId: props.pollOption.id,
+      };
+
+      return fetch("/api/vote", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    },
+    {
+      onSuccess: () => toast.success("Vote registered"),
+      onError: () => toast.error("Vote failed"),
+    }
+  );
+
   function myVote() {
-    alert("I work");
+    if (!vote.isLoading) {
+      vote.mutate();
+    }
   }
 
   return (
@@ -80,7 +101,7 @@ export default function Poll(props: Props) {
         </div>
         <div className="lg:mr-4 md:mr-4 sm:mr-3 mr-2 lg:mt-12 md:mt-10 sm:mt-9 mt-8">
           <p className="lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium">
-            {(data.votes / totalVotes).toFixed(0)}%
+            {(props.votes / props.totalVotes).toFixed(0)}%
           </p>
         </div>
       </div>

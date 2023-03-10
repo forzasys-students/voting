@@ -1,20 +1,17 @@
 import VotableItem from "@/components/VotableItem";
 import { PollData } from "@/types/poll";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 interface Props {
   poll: PollData;
 }
 
 export default function Poll(props: Props) {
-  const [votes] = useState(100);
-  const [totalVotes] = useState(100);
+  const totalVotes = useMemo(() => props.poll.votes.length, [props]);
 
-  const precent = votes / totalVotes;
-
-  const progress = precent / 100;
-
-  // width: ${precent * 100}%;
+  const getVotes = (optionId: number) => {
+    return props.poll.votes.filter((vote) => vote.optionId === optionId).length;
+  };
 
   return (
     <>
@@ -25,12 +22,19 @@ export default function Poll(props: Props) {
         <h2 className="font-medium lg:text-xl md:text-lg sm:text-base text-sm lg:h-20 md:h-16 sm:h-14 h-12">
           {props.poll.description}
         </h2>
-        <p className="font-light">{votes} votes</p>
+        <p className="font-light">{props.poll.votes.length} stemmer</p>
       </div>
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
         {props.poll &&
           props.poll.options.map((pollOption) => {
-            return <VotableItem key={pollOption.id} pollOption={pollOption} />;
+            return (
+              <VotableItem
+                key={pollOption.id}
+                pollOption={pollOption}
+                votes={getVotes(pollOption.id)}
+                totalVotes={totalVotes}
+              />
+            );
           })}
       </div>
     </>

@@ -11,7 +11,7 @@ export default async function handler(
 
   if (req.method === "GET") {
     const poll = await prisma.poll.findFirst({
-      include: { options: true },
+      include: { options: true, votes: true },
       where: { id: Number(pollId) },
     });
 

@@ -24,8 +24,12 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-5xl text-black font-semibold">Aktive polls</h1>
+        <h1 className="text-5xl text-black font-semibold">
+          Aktive avstemninger
+        </h1>
         <br></br>
+
+        {polls.length === 0 && <p className="text-2xl">Ingen avstemninger</p>}
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
           {polls &&

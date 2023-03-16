@@ -57,6 +57,30 @@ export default function Poll(props: Props) {
     if (!vote.isLoading) {
       vote.mutate();
     }
+
+    var textContainter = document.getElementsByClassName('text-container');
+    for (var i in textContainter){
+      if (textContainter.hasOwnProperty(i) ) {
+        textContainter[i].className = 'bg-gray-200 lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-container'
+      }
+    }
+
+    var progressBar = document.getElementsByClassName('progress-bar');
+    for (var i in progressBar){
+      /*if (props.pollOption.id === votedId) {
+        progressBar[i].className = 'absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-11/12 progress-bar'
+      }
+      else*/ if (progressBar.hasOwnProperty(i) ) {
+        progressBar[i].className = 'absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-3/12 progress-bar'
+      }
+    }
+
+    var percentage = document.getElementsByClassName('percentage');
+    for (var i in percentage){
+      if (percentage.hasOwnProperty(i)) {
+        percentage[i].className = 'lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium visible percentage'
+      }
+    }
   }
 
   // TEMP
@@ -91,15 +115,14 @@ export default function Poll(props: Props) {
       ></ReactPlayer>
       <div
         className={
-          "bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0"
+          "bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-container"
         }
         onClick={myVote}
       >
         <div
-          className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10"
-          style={{ width: 384 * progress }}
+          className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-0 progress-bar"
+          /*style={{ width: 384 * progress }}*/
         >
-          <p className="text-sky-400">Secret text</p>
         </div>
         <div className="col-span-4 z-20">
           <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
@@ -127,8 +150,8 @@ export default function Poll(props: Props) {
             </div>
           </div>
         </div>
-        <div className="lg:mr-4 md:mr-4 sm:mr-3 mr-2 lg:mt-12 md:mt-10 sm:mt-9 mt-8">
-          <p className="lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium">
+        <div className="lg:mr-4 md:mr-4 sm:mr-3 mr-2 lg:mt-12 md:mt-10 sm:mt-9 mt-8 z-20">
+          <p className="lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium hidden percentage">
             {props.totalVotes
               ? ((props.votes / props.totalVotes) * 100).toFixed(0)
               : 0}

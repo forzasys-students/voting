@@ -39,3 +39,7 @@ a {
   overflow: hidden;
   -webkit-line-clamp: var(--max-lines);
 }
+
+.progress-bar {
+  width: 384 * progress;
+}

@@ -70,7 +70,7 @@ export default function Poll(props: Props) {
 
     var progressBar = document.getElementsByClassName('progress-bar');
     for (var i in progressBar){
-      /*if (props.pollOption.id === votedId) {// Do (props.pollOption.id === id of i)
+      /*if (props.pollOption.id === votedId) {// Do (id of i's pollOption === props.pollOption.id)
         progressBar[i].className = 'absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-11/12 progress-bar'
       }
       else*/ if (progressBar.hasOwnProperty(i) ) {

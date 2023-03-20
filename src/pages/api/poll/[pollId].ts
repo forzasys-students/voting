@@ -1,11 +1,11 @@
-import { Poll } from "@prisma/client";
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSession } from "next-auth";
-import { ZodError } from "zod";
-import { pollSchema } from ".";
+import { Poll } from '@prisma/client';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSession } from 'next-auth';
+import { ZodError } from 'zod';
+import { pollSchema } from '.';
 
-import prisma from "../../../lib/prisma";
-import { authOptions } from "../auth/[...nextauth]";
+import prisma from '../../../lib/prisma';
+import { authOptions } from '../auth/[...nextauth]';
 
 export default async function handler(
   req: NextApiRequest,
@@ -14,14 +14,14 @@ export default async function handler(
   const { pollId } = req.query;
 
   // Fetch poll
-  if (req.method === "GET") {
+  if (req.method === 'GET') {
     const poll = await prisma.poll.findFirst({
-      include: { options: true, votes: true },
+      include: { options: true },
       where: { id: Number(pollId) },
     });
 
     if (!poll) {
-      return res.status(404).send("Poll not found");
+      return res.status(404).send('Poll not found');
     }
 
     return res.json(poll);
@@ -31,18 +31,18 @@ export default async function handler(
   const session = await getServerSession(req, res, authOptions);
 
   if (!session || !session.user) {
-    return res.status(401).send("Unauthorized");
+    return res.status(401).send('Unauthorized');
   }
 
   // Edit Poll
-  if (req.method === "PUT") {
+  if (req.method === 'PUT') {
     const poll = await prisma.poll.findFirst({
       include: { options: true, votes: true },
       where: { id: Number(pollId) },
     });
 
     if (!poll) {
-      return res.status(404).send("Poll not found");
+      return res.status(404).send('Poll not found');
     }
 
     const body = await pollSchema.safeParseAsync(req.body);
@@ -63,18 +63,18 @@ export default async function handler(
   }
 
   // Delete Poll
-  if (req.method === "DELETE") {
+  if (req.method === 'DELETE') {
     const poll = await prisma.poll.findFirst({
       include: { options: true, votes: true },
       where: { id: Number(pollId) },
     });
 
     if (!poll) {
-      return res.status(404).send("Poll not found");
+      return res.status(404).send('Poll not found');
     }
 
     await prisma.poll.delete({ where: { id: poll.id } });
 
-    return res.status(200).send("OK");
+    return res.status(200).send('OK');
   }
 }

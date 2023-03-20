@@ -20,14 +20,17 @@ model User {
 }
 
 model Poll {
-  id          Int          @id @default(autoincrement())
+  id          Int    @id @default(autoincrement())
   title       String
   description String
   creatorId   Int
-  creator     User         @relation(fields: [creatorId], references: [id], onDelete: Cascade)
-  date        DateTime     @default(now())
-  options     PollOption[]
-  votes       Vote[]
+  creator     User   @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  date    DateTime  @default(now())
+  endDate DateTime?
+
+  options PollOption[]
+  votes   Vote[]
 
   @@map(name: "polls")
 }

@@ -43,6 +43,7 @@ export default function Navbar() {
           alt="Eliteserie Logo"
           width={32}
           height={32}
+          priority={true}
         />
       </Link>
     </header>

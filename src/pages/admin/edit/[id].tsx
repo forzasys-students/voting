@@ -67,7 +67,15 @@ export default function EditPoll({
     poll?.description ?? ''
   );
 
-  const [events, setEvents] = useState<PollOption[]>([]);
+  const [events, setEvents] = useState<PollOption[]>(
+    poll?.options.map((option) => ({
+      eventId: option.eventId,
+      date: new Date(option.date).toISOString(),
+      description: option.description,
+      videoUrl: option.videoUrl,
+      thumbnailUrl: option.thumbnailUrl,
+    })) || []
+  );
 
   const mutation = useMutation(
     () => {
@@ -78,8 +86,8 @@ export default function EditPoll({
         endDate: new Date().toISOString(),
       };
 
-      return fetch('/api/poll', {
-        method: 'POST',
+      return fetch(`/api/poll/${poll?.id}`, {
+        method: 'PUT',
         body: JSON.stringify(data),
         headers: {
           'Content-Type': 'application/json',
@@ -90,8 +98,8 @@ export default function EditPoll({
       onSuccess: async (response) => {
         const data = (await response.json()) as Poll;
 
-        toast.success('Avstemning opprettet');
-        router.push(`/poll/${data.id}`);
+        toast.success('Avstemning oppdatert');
+        // router.push(`/poll/${data.id}`);
       },
       onError: () => {
         toast.error('Noe gikk galt');
@@ -126,16 +134,24 @@ export default function EditPoll({
       </Head>
 
       <Link href="/admin" className="underline">
-        <p className="mb-3">Tilbake til admin</p>
+        <p className="mb-3">Gå til admin</p>
       </Link>
 
-      <button
-        disabled={deletePoll.isLoading}
-        onClick={() => deletePoll.mutate()}
-        className="bg-gray-100 hover:bg-gray-200 px-3 py-2 mb-3"
-      >
-        Slett avstemning
-      </button>
+      <div className="flex flex-row flex-wrap gap-3">
+        <Link href={`/poll/${poll.id}`}>
+          <button className="bg-gray-100 hover:bg-gray-200 px-3 py-2 mb-3">
+            Tilbake til avstemning side
+          </button>
+        </Link>
+
+        <button
+          disabled={deletePoll.isLoading}
+          onClick={() => deletePoll.mutate()}
+          className="text-red-900 bg-red-200 hover:bg-red-400 px-3 py-2 mb-3"
+        >
+          Slett avstemning!
+        </button>
+      </div>
 
       <h3 className="text-2xl font-bold ">Rediger avstemning</h3>
 

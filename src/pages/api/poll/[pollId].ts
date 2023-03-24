@@ -56,6 +56,7 @@ export default async function handler(
       data: {
         title: body.data.title,
         description: body.data.description,
+        endDate: body.data.endDate,
       },
     });
 

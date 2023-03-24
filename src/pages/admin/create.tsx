@@ -12,6 +12,20 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Poll } from '@prisma/client';
 
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import nb from 'dayjs/locale/nb';
+
+dayjs.extend(relativeTime);
+dayjs.locale(nb);
+
+// @ts-ignore
+import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
+
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
+
 const getMatchData = async () => {
   const response = await fetch('/api/matchdata');
   const data = await response.json();
@@ -37,13 +51,15 @@ export default function CreatePoll() {
   const [description, setDescription] = useState<string>('');
   const [events, setEvents] = useState<PollOption[]>([]);
 
+  const [endDate, setEndDate] = useState(new Date(Date.now() + 86_400_000));
+
   const mutation = useMutation(
     () => {
       const data: PollCreation = {
         title,
         description,
         options: events,
-        endDate: new Date(Date.now() + 3_600_000).toISOString(),
+        endDate: endDate.toISOString(),
       };
 
       return fetch('/api/poll', {
@@ -105,6 +121,14 @@ export default function CreatePoll() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
+        </div>
+
+        <div className="mb-3">
+          <label className="block">Sluttdato</label>
+          <DateTimePicker onChange={setEndDate} value={endDate} />
+          <small className="block text-gray-700">
+            {dayjs(endDate).fromNow()}
+          </small>
         </div>
 
         <div>

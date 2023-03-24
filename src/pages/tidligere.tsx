@@ -16,6 +16,8 @@ export const getServerSideProps = async () => {
 export default function Home({
   polls,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const filteredPolls = polls.filter(pollEnded);
+
   return (
     <>
       <Head>
@@ -29,12 +31,12 @@ export default function Home({
           Tidligere avstemninger
         </h1>
 
-        {polls.length === 0 && (
-          <p className="text-2xl">Ingen aktive avstemninger funnet</p>
+        {filteredPolls.length === 0 && (
+          <p className="text-2xl">Ingen avstemninger funnet</p>
         )}
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
-          {polls.filter(pollEnded).map((poll) => {
+          {filteredPolls.map((poll) => {
             return <PollItem key={poll.id} poll={poll} />;
           })}
         </div>

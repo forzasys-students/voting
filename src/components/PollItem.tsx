@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
-import Link from "next/link";
-import { PollData } from "@/types/poll";
+import { useState } from 'react';
+import Link from 'next/link';
+import { PollData } from '@/types/poll';
 
 interface Props {
   poll: PollData;
@@ -14,7 +14,7 @@ export default function PollItem(props: Props) {
     <Link href={`/poll/${props.poll.id}`}>
       <div className="relative mb-3 hover:shadow-xl">
         <img
-          className="bg-black"
+          className="bg-black w-full"
           src={props.poll.options[0].thumbnailUrl}
           alt="Poll thumbnail"
         />

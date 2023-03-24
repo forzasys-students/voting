@@ -4,7 +4,7 @@ import { PollData } from '@/types/poll';
 import { useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -45,6 +45,8 @@ export default function Poll(props: Props) {
   const ended = useMemo(() => {
     return pollEnded(props.poll);
   }, [props.poll]);
+
+  const [showVotes, setShowVotes] = useState<boolean>(ended);
 
   const getVotes = (optionId: number) => {
     return voteData.data.filter((vote) => vote === optionId).length;
@@ -90,6 +92,8 @@ export default function Poll(props: Props) {
               votes={getVotes(pollOption.id)}
               totalVotes={totalVotes}
               ended={ended}
+              showVotes={showVotes}
+              setShowVotes={setShowVotes}
             />
           );
         })}

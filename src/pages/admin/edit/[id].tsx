@@ -27,6 +27,7 @@ import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
+import { Button } from '@/components/Button';
 
 const getMatchData = async () => {
   const response = await fetch('/api/matchdata');
@@ -157,18 +158,16 @@ export default function EditPoll({
 
       <div className="flex flex-row flex-wrap gap-3 h-full">
         <Link href={`/poll/${poll.id}`}>
-          <button className="bg-gray-100 hover:bg-gray-200 px-3 py-2 mb-3">
-            Tilbake til avstemning side
-          </button>
+          <Button>Tilbake til avstemning side</Button>
         </Link>
 
-        <button
+        <Button
+          className="text-red-600 bg-red-100 hover:bg-red-200"
           disabled={deletePoll.isLoading}
           onClick={() => deletePoll.mutate()}
-          className="text-red-900 bg-red-200 hover:bg-red-400 px-3 py-2 mb-3"
         >
           Slett avstemning!
-        </button>
+        </Button>
       </div>
 
       <h3 className="text-2xl font-bold ">Rediger avstemning</h3>

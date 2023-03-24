@@ -10,6 +10,7 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import nb from 'dayjs/locale/nb';
 import Link from 'next/link';
+import { pollEnded } from '@/lib/helpers';
 
 dayjs.extend(relativeTime);
 dayjs.locale(nb);
@@ -41,8 +42,8 @@ export default function Poll(props: Props) {
   const totalVotes = useMemo(() => voteData.data.length, [voteData]);
 
   const ended = useMemo(() => {
-    return !!endDate && new Date() > new Date(endDate);
-  }, [endDate]);
+    return pollEnded(props.poll);
+  }, [props.poll]);
 
   const getVotes = (optionId: number) => {
     return voteData.data.filter((vote) => vote === optionId).length;

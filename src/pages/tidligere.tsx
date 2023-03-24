@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google';
 import PollItem from '@/components/PollItem';
 import { PollData } from '@/types/poll';
 import { InferGetServerSidePropsType } from 'next';
+import { pollEnded } from '@/lib/helpers';
 
 export const getServerSideProps = async () => {
   const response = await fetch(`${process.env.NEXTAUTH_URL}/api/poll`);
@@ -28,10 +29,12 @@ export default function Home({
           Tidligere avstemninger
         </h1>
 
-        {polls.length === 0 && <p className="text-2xl">Ingen avstemninger</p>}
+        {polls.length === 0 && (
+          <p className="text-2xl">Ingen aktive avstemninger funnet</p>
+        )}
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
-          {polls.map((poll) => {
+          {polls.filter(pollEnded).map((poll) => {
             return <PollItem key={poll.id} poll={poll} />;
           })}
         </div>

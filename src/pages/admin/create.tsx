@@ -43,7 +43,7 @@ export default function CreatePoll() {
         title,
         description,
         options: events,
-        endDate: new Date().toISOString(),
+        endDate: new Date(Date.now() + 3_600_000).toISOString(),
       };
 
       return fetch('/api/poll', {

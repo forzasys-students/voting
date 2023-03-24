@@ -154,6 +154,8 @@ export default function CreatePoll() {
                         description: event.description,
                         videoUrl: event.video_url,
                         thumbnailUrl: event.thumbnail_url,
+                        tournamentName: event.game.tournament_name,
+                        round: event.game.round,
                       };
 
                       if (e.target.checked) {

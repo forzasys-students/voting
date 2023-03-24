@@ -82,14 +82,20 @@ export default function EditPoll({
     poll?.description ?? ''
   );
 
-  const [events, setEvents] = useState<PollOption[]>(
-    poll?.options.map((option) => ({
-      eventId: option.eventId,
-      date: new Date(option.date).toISOString(),
-      description: option.description,
-      videoUrl: option.videoUrl,
-      thumbnailUrl: option.thumbnailUrl,
-    })) || []
+  const [events] = useState<PollOption[]>(
+    poll?.options.map((option) => {
+      const optionObject: PollOption = {
+        eventId: option.eventId,
+        date: new Date(option.date).toISOString(),
+        description: option.description,
+        videoUrl: option.videoUrl,
+        thumbnailUrl: option.thumbnailUrl,
+        tournamentName: option.tournamentName || undefined,
+        round: option.round || undefined,
+      };
+
+      return optionObject;
+    }) || []
   );
 
   const [endDate, setEndDate] = useState(

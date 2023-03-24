@@ -5,6 +5,12 @@ import { PollOption } from '@prisma/client';
 import { useMutation } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 import { queryClient } from '@/pages/_app';
+
+import dayjs from 'dayjs';
+import LocalizedFormat from 'dayjs/plugin/localizedFormat';
+
+dayjs.extend(LocalizedFormat);
+
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 interface Props {
@@ -72,7 +78,6 @@ export default function Poll(props: Props) {
   function showVotes() {
     const textBackdrop = document.getElementsByClassName('text-backdrop');
     const textContainer = document.getElementsByClassName('text-container');
-    const percentage = document.getElementsByClassName('percentage');
 
     for (let i in textBackdrop) {
       if (textBackdrop.hasOwnProperty(i)) {
@@ -86,13 +91,6 @@ export default function Poll(props: Props) {
         textContainer[i].className = 'col-span-4 z-20 text-container';
       }
     }
-
-    // for (let i in percentage) {
-    //   if (percentage.hasOwnProperty(i)) {
-    //     percentage[i].className =
-    //       'lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium visible percentage';
-    //   }
-    // }
   }
 
   useEffect(() => {
@@ -157,14 +155,14 @@ export default function Poll(props: Props) {
             <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
               <div className="flex">
                 <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                  {data.eventDate.toString()}
+                  {dayjs(props.pollOption.date).format('L LT')}
                 </p>
                 <p className="mr-2 ml-2 font-normal lg:text-base md:text-sm sm:text-xs text-xs">
                   {' '}
                   |{' '}
                 </p>
                 <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                  {data.videoLength.toString()}
+                  Round: {props.pollOption.round}
                 </p>
               </div>
               <div className="w-full">

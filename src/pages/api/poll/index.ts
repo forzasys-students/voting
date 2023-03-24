@@ -11,6 +11,8 @@ export const pollOptionSchema = z.object({
   description: z.string(),
   videoUrl: z.string().url(),
   thumbnailUrl: z.string().url(),
+  tournamentName: z.string().optional(),
+  round: z.number().optional(),
 });
 
 export const pollSchema = z.object({
@@ -68,6 +70,8 @@ export default async function handler(
       thumbnailUrl: option.thumbnailUrl,
       pollId: poll.id,
       eventId: option.eventId,
+      tournamentName: option.tournamentName || null,
+      round: option.round || null,
     })),
   });
 

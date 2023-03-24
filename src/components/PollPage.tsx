@@ -55,7 +55,7 @@ export default function Poll(props: Props) {
       {session.status === 'authenticated' && (
         <Link href={`/admin/edit/${props.poll.id}`}>
           <button className="bg-gray-100 hover:bg-gray-200 p-3 mb-3">
-            Administer avstemning
+            Administrer avstemning
           </button>
         </Link>
       )}

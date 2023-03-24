@@ -47,9 +47,9 @@ export default async function handler(
   const userAgent = req.headers['user-agent'] as string;
 
   // // Remove existing votes
-  // await prisma.vote.deleteMany({
-  //   where: { pollId: body.data.pollId, ipAddress },
-  // });
+  await prisma.vote.deleteMany({
+    where: { pollId: body.data.pollId, ipAddress },
+  });
 
   await prisma.vote.create({ data: { ...body.data, ipAddress, userAgent } });
 

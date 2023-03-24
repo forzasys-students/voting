@@ -109,7 +109,7 @@ export default function Poll(props: Props) {
   }, [props.ended, props.pollOption.pollId]);
 
   function registerVote() {
-    if (props.ended) return;
+    if (props.ended || votedId !== null) return;
 
     if (!vote.isLoading) {
       userVote.set(props.pollOption.pollId, props.pollOption.id);

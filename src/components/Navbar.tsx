@@ -30,7 +30,7 @@ export default function Navbar() {
         </div>
         <Link
           href="/"
-          className="bg-sky-400 text-white font-bold sm:py-2 py-1 sm:px-4 px-2 border-4 md:text-3xl sm:text-xl lg:right-40 md:right-24 sm:right-10 right-10 sm:top-12 top-8 cursor-pointer absolute"
+          className="bg-[#00aeea] text-white font-bold sm:py-2 py-1 sm:px-4 px-2 border-4 md:text-3xl sm:text-xl lg:right-40 md:right-24 sm:right-10 right-10 sm:top-12 top-8 cursor-pointer absolute"
         >
           ALLE AVSTEMMNINGER
         </Link>

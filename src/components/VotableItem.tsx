@@ -68,26 +68,38 @@ export default function Poll(props: Props) {
   );
 
   function showVotes() {
-    const textContainter = document.getElementsByClassName('text-container');
+    const container = document.getElementsByClassName('container');
+    const textBackdrop = document.getElementsByClassName('text-backdrop');
+    const textContainer = document.getElementsByClassName('text-container');
     const progressBar = document.getElementsByClassName('progress-bar');
     const percentage = document.getElementsByClassName('percentage');
 
-    for (let i in textContainter) {
-      if (textContainter.hasOwnProperty(i)) {
-        textContainter[i].className =
-          'bg-gray-200 lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-container';
+    for (let i in textBackdrop) {
+      if (textBackdrop.hasOwnProperty(i)) {
+        textBackdrop[i].className =
+          'relative bg-gray-200 lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-backdrop';
       }
     }
 
-    for (let i in progressBar) {
-      /*if (props.pollOption.id === votedId) {// Do (id of i's pollOption === props.pollOption.id)
-        progressBar[i].className = 'absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-11/12 progress-bar'
-      }
-      else*/ if (progressBar.hasOwnProperty(i)) {
-        progressBar[i].className =
-          'absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-3/12 progress-bar';
+    for (let i in textContainer) {
+      if (textContainer.hasOwnProperty(i)) {
+        textContainer[i].className =
+          'col-span-4 z-20 text-container';
       }
     }
+
+    /*for (let i in progressBar) {
+      var widthPercent = ((props.votes / props.totalVotes) * 100).toFixed(0).toString();
+      console.log(widthPercent);
+      console.log(((props.votes / props.totalVotes) * 100).toFixed(0));
+      if (props.pollOption.id === votedId && progressBar.hasOwnProperty(i)) {// Doesn't do anything i.e. if condition needs fix
+        progressBar[i].className = 'bg-[#00aeea] lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-['+widthPercent+'%] progress-bar'
+      }
+      else if (progressBar.hasOwnProperty(i)) {
+        progressBar[i].className =
+          'bg-[#00aeea] lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-['+widthPercent+'%] progress-bar';
+      }
+    }*/
 
     for (let i in percentage) {
       if (percentage.hasOwnProperty(i)) {
@@ -123,10 +135,10 @@ export default function Poll(props: Props) {
   return (
     <div
       className={
-        votedId
+        /*votedId
           ? `brightness-${props.pollOption.id === votedId ? '100' : '75'}`
-          : undefined
-      }
+          : undefined*/
+      'container'}
     >
       <ReactPlayer
         aspect
@@ -145,48 +157,49 @@ export default function Poll(props: Props) {
       ></ReactPlayer>
       <div
         className={
-          'bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-container'
+          'relative bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-backdrop'
         }
         onClick={myVote}
       >
-        <div
-          className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-0 progress-bar"
-          /*style={{ width: 384 * progress }}*/
-        ></div>
-        <div className="col-span-4 z-20">
-          <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
-            <div className="flex">
-              <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                {data.eventDate.toString()}
-              </p>
-              <p className="mr-2 ml-2 font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                {' '}
-                |{' '}
-              </p>
-              <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                {data.videoLength.toString()}
-              </p>
-            </div>
-            <div className="w-full">
-              <p className="font-semibold lg:text-xl md:text-base sm:text-sm text-sm">
-                {props.pollOption.description}
-              </p>
-            </div>
-            <div>
-              <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                {data.videoOrigin.toString()}
-              </p>
+        <div className='absolute grid grid-cols-5 gap-0'>
+          <div className="col-span-5 z-20 text-container">
+            <div className="lg:ml-4 md:ml-4 sm:ml-3 ml-2 mt-1">
+              <div className="flex">
+                <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
+                  {data.eventDate.toString()}
+                </p>
+                <p className="mr-2 ml-2 font-normal lg:text-base md:text-sm sm:text-xs text-xs">
+                  {' '}
+                  |{' '}
+                </p>
+                <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
+                  {data.videoLength.toString()}
+                </p>
+              </div>
+              <div className="w-full">
+                <p className="font-semibold lg:text-xl md:text-base sm:text-sm text-sm">
+                  {props.pollOption.description}
+                </p>
+              </div>
+              <div>
+                <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
+                  {data.videoOrigin.toString()}
+                </p>
+              </div>
             </div>
           </div>
+          <div className="lg:mr-4 md:mr-4 sm:mr-3 mr-2 lg:mt-12 md:mt-10 sm:mt-9 mt-8 z-20">
+            <p className="lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium hidden percentage">
+              {props.totalVotes
+                ? ((props.votes / props.totalVotes) * 100).toFixed(0)
+                : 0}
+              %
+            </p>
+          </div>
         </div>
-        <div className="lg:mr-4 md:mr-4 sm:mr-3 mr-2 lg:mt-12 md:mt-10 sm:mt-9 mt-8 z-20">
-          <p className="lg:text-xl md:text-base sm:text-sm text-sm text-right font-medium hidden percentage">
-            {props.totalVotes
-              ? ((props.votes / props.totalVotes) * 100).toFixed(0)
-              : 0}
-            %
-          </p>
-        </div>
+        <div
+          className={'bg-[#00aeea] lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-[90%] progress-bar'}
+        ></div>
       </div>
     </div>
   );

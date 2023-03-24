@@ -9,6 +9,7 @@ import { useMemo } from 'react';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import nb from 'dayjs/locale/nb';
+
 import Link from 'next/link';
 import { pollEnded } from '@/lib/helpers';
 

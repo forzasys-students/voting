@@ -4,7 +4,6 @@ import Argon2 from 'argon2';
 import prisma from '../../../lib/prisma';
 
 export const authOptions: NextAuthOptions = {
-  useSecureCookies: false,
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. "Sign in with...")

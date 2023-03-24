@@ -1,19 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
-import Z from "zod";
+import Head from 'next/head';
+import Z from 'zod';
 
-import type { Response } from "@/types/matchdata";
-import { useSession } from "next-auth/react";
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { useState } from "react";
-import { pollOptionSchema, pollSchema } from "../api/poll";
-import { toast } from "react-hot-toast";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { Poll } from "@prisma/client";
+import type { Response } from '@/types/matchdata';
+import { useSession } from 'next-auth/react';
+import { useMutation, useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
+import { pollOptionSchema, pollSchema } from '../api/poll';
+import { toast } from 'react-hot-toast';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { Poll } from '@prisma/client';
+
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import nb from 'dayjs/locale/nb';
+
+dayjs.extend(relativeTime);
+dayjs.locale(nb);
+
+// @ts-ignore
+import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
+
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
 
 const getMatchData = async () => {
-  const response = await fetch("/api/matchdata");
+  const response = await fetch('/api/matchdata');
   const data = await response.json();
 
   return data;
@@ -27,15 +41,17 @@ export default function CreatePoll() {
   const router = useRouter();
 
   const matchData = useQuery<Response>({
-    queryKey: ["matchData"],
+    queryKey: ['matchData'],
     queryFn: getMatchData,
     initialData: { playlists: [], total: 0 },
-    enabled: session.status === "authenticated",
+    enabled: session.status === 'authenticated',
   });
 
-  const [title, setTitle] = useState<string>("");
-  const [description, setDescription] = useState<string>("");
+  const [title, setTitle] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
   const [events, setEvents] = useState<PollOption[]>([]);
+
+  const [endDate, setEndDate] = useState(new Date(Date.now() + 86_400_000));
 
   const mutation = useMutation(
     () => {
@@ -43,13 +59,14 @@ export default function CreatePoll() {
         title,
         description,
         options: events,
+        endDate: endDate.toISOString(),
       };
 
-      return fetch("/api/poll", {
-        method: "POST",
+      return fetch('/api/poll', {
+        method: 'POST',
         body: JSON.stringify(data),
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       });
     },
@@ -57,16 +74,16 @@ export default function CreatePoll() {
       onSuccess: async (response) => {
         const data = (await response.json()) as Poll;
 
-        toast.success("Avstemning opprettet");
+        toast.success('Avstemning opprettet');
         router.push(`/poll/${data.id}`);
       },
       onError: () => {
-        toast.error("Noe gikk galt");
+        toast.error('Noe gikk galt');
       },
     }
   );
 
-  if (session.status !== "authenticated") {
+  if (session.status !== 'authenticated') {
     return <h1>Logg inn</h1>;
   }
 
@@ -106,6 +123,14 @@ export default function CreatePoll() {
           />
         </div>
 
+        <div className="mb-3">
+          <label className="block">Sluttdato</label>
+          <DateTimePicker onChange={setEndDate} value={endDate} />
+          <small className="block text-gray-700">
+            {dayjs(endDate).fromNow()}
+          </small>
+        </div>
+
         <div>
           <label htmlFor="password">Hendelser ({events.length} valgt)</label>
 
@@ -115,7 +140,7 @@ export default function CreatePoll() {
                 <div
                   key={event.id}
                   className="select-none"
-                  style={{ width: "350px", height: "200px" }}
+                  style={{ width: '350px', height: '200px' }}
                 >
                   <input
                     type="checkbox"

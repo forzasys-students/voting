@@ -1,12 +1,13 @@
-import Head from "next/head";
+import Head from 'next/head';
+import prisma from '../../lib/prisma';
 
-import { useSession, signOut } from "next-auth/react";
-import Link from "next/link";
-import { Poll } from "@prisma/client";
-import { InferGetServerSidePropsType } from "next";
+import { useSession, signOut } from 'next-auth/react';
+import Link from 'next/link';
+import { Poll } from '@prisma/client';
+import { InferGetServerSidePropsType } from 'next';
 
 export const getServerSideProps = async () => {
-  const polls = await prisma.poll.findMany({ orderBy: { id: "desc" } });
+  const polls = await prisma.poll.findMany({ orderBy: { id: 'desc' } });
 
   // Error when parsing date, temp fix
   const test = JSON.parse(JSON.stringify(polls)) as Poll[];
@@ -19,7 +20,7 @@ export default function Admin({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const session = useSession();
 
-  if (session.status !== "authenticated") {
+  if (session.status !== 'authenticated') {
     return (
       <p>
         Du er ikke logget inn. <Link href="/login">Gå til login side</Link>
@@ -36,12 +37,12 @@ export default function Admin({
       <div className="flex flex-row flex-wrap gap-1 mb-2">
         <button
           className="bg-gray-100 hover:bg-gray-200 p-3"
-          onClick={() => signOut({ redirect: true, callbackUrl: "/login" })}
+          onClick={() => signOut({ redirect: true, callbackUrl: '/login' })}
         >
           Logg ut
         </button>
 
-        <Link href="/admin/avstemning">
+        <Link href="/admin/create">
           <button className="bg-gray-100 hover:bg-gray-200 p-3">
             Lag ny avstemning
           </button>

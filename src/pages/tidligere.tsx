@@ -16,7 +16,7 @@ export const getServerSideProps = async () => {
 export default function Home({
   polls,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const filteredPolls = polls.filter((poll) => !pollEnded(poll));
+  const filteredPolls = polls.filter(pollEnded);
 
   return (
     <>
@@ -28,11 +28,11 @@ export default function Home({
       </Head>
       <main>
         <h1 className="text-5xl text-black font-semibold mb-8">
-          Aktive avstemninger
+          Tidligere avstemninger
         </h1>
 
         {filteredPolls.length === 0 && (
-          <p className="text-2xl">Ingen avstemninger</p>
+          <p className="text-2xl">Ingen avstemninger funnet</p>
         )}
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">

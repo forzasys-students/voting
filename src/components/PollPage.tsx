@@ -1,11 +1,20 @@
 import VotableItem from '@/components/VotableItem';
 
 import { PollData } from '@/types/poll';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
-import { useMemo, useState } from 'react';
-import toast from 'react-hot-toast';
+import { useMemo } from 'react';
+
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import nb from 'dayjs/locale/nb';
+
+import Link from 'next/link';
+import { pollEnded } from '@/lib/helpers';
+
+dayjs.extend(relativeTime);
+dayjs.locale(nb);
 
 const fetchVotes = async (pollId: number): Promise<number[]> => {
   const response = await fetch(`/api/votes/${pollId}`);
@@ -22,7 +31,7 @@ export default function Poll(props: Props) {
   const session = useSession();
   const router = useRouter();
 
-  const { title, description, options } = props.poll;
+  const { title, description, options, endDate } = props.poll;
 
   const voteData = useQuery<number[]>({
     queryKey: ['votes', props.poll.id],
@@ -33,43 +42,40 @@ export default function Poll(props: Props) {
 
   const totalVotes = useMemo(() => voteData.data.length, [voteData]);
 
+  const ended = useMemo(() => {
+    return pollEnded(props.poll);
+  }, [props.poll]);
+
   const getVotes = (optionId: number) => {
     return voteData.data.filter((vote) => vote === optionId).length;
   };
 
-  const deletePoll = useMutation(
-    () => {
-      return fetch(`/api/poll/${props.poll.id}`, {
-        method: 'DELETE',
-      });
-    },
-    {
-      onSuccess: () => {
-        toast.success('Avstemning slettet');
-        router.push('/admin');
-      },
-    }
-  );
-
   return (
     <>
       {session.status === 'authenticated' && (
-        <button
-          disabled={deletePoll.isLoading}
-          onClick={() => deletePoll.mutate()}
-          className="bg-gray-100 hover:bg-gray-200 p-3 mb-3"
-        >
-          Slett avstemning
-        </button>
+        <Link href={`/admin/edit/${props.poll.id}`}>
+          <button className="bg-gray-100 hover:bg-gray-200 p-3 mb-3">
+            Administrer avstemning
+          </button>
+        </Link>
       )}
 
       <div>
+        {endDate && (
+          <span className={ended ? 'text-red-600 font-bold' : 'text-slate-600'}>
+            {ended && <span>Avstemning er lukket.</span>}
+            {!ended && <span>Lukkes {dayjs(endDate).fromNow()}</span>}
+          </span>
+        )}
+
         <h1 className="font-bold lg:text-6xl md:text-5xl sm:text-4xl text-3xl">
           {title}
         </h1>
+
         <h2 className="font-medium lg:text-xl md:text-lg sm:text-base text-sm lg:h-20 md:h-16 sm:h-14 h-12">
-          {description}
+          <span>{description}</span>
         </h2>
+
         <p className="font-light">
           {voteData.data.length}{' '}
           {voteData.data.length === 1 ? 'stemme' : 'stemmer'}
@@ -83,6 +89,7 @@ export default function Poll(props: Props) {
               pollOption={pollOption}
               votes={getVotes(pollOption.id)}
               totalVotes={totalVotes}
+              ended={ended}
             />
           );
         })}

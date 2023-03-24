@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { PollOption } from '@prisma/client';
 import { useMutation } from '@tanstack/react-query';
@@ -13,6 +11,7 @@ interface Props {
   pollOption: PollOption;
   votes: number;
   totalVotes: number;
+  ended: boolean;
 }
 
 const userVote = {
@@ -109,18 +108,19 @@ export default function Poll(props: Props) {
     }
   }
 
-  // Fetch vote from local storage
   useEffect(() => {
+    // Fetch vote from local storage
     const myVote = userVote.get(props.pollOption.pollId);
 
-    if (myVote) {
-      setVotedId(myVote);
-      showVotes();
-    }
-  }, [props.pollOption.pollId]);
+    // Set vote from localStorage
+    if (myVote) setVotedId(myVote);
 
-  function myVote() {
-    // console.log(props.pollOption.id);
+    // Show result if voted or poll has ended
+    if (props.ended || myVote) showVotes();
+  }, [props.ended, props.pollOption.pollId]);
+
+  function registerVote() {
+    if (props.ended) return;
 
     if (!vote.isLoading) {
       userVote.set(props.pollOption.pollId, props.pollOption.id);
@@ -159,7 +159,7 @@ export default function Poll(props: Props) {
         className={
           'relative bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-backdrop'
         }
-        onClick={myVote}
+        onClick={registerVote}
       >
         <div className='absolute grid grid-cols-5 gap-0'>
           <div className="col-span-5 z-20 text-container">

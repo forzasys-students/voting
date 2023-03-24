@@ -7,6 +7,13 @@ import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import toast from 'react-hot-toast';
 
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import nb from 'dayjs/locale/nb';
+
+dayjs.extend(relativeTime);
+dayjs.locale(nb);
+
 const fetchVotes = async (pollId: number): Promise<number[]> => {
   const response = await fetch(`/api/votes/${pollId}`);
   const data = (await response.json()) as number[];
@@ -22,7 +29,7 @@ export default function Poll(props: Props) {
   const session = useSession();
   const router = useRouter();
 
-  const { title, description, options } = props.poll;
+  const { title, description, options, endDate } = props.poll;
 
   const voteData = useQuery<number[]>({
     queryKey: ['votes', props.poll.id],
@@ -64,11 +71,22 @@ export default function Poll(props: Props) {
       )}
 
       <div>
+        {endDate && (
+          <span className="text-slate-600">
+            {new Date() > new Date(endDate) && (
+              <span>Avsteming er avsluttet</span>
+            )}
+
+            {new Date() < new Date(endDate) && (
+              <span>Lukkes {dayjs(endDate).fromNow()}</span>
+            )}
+          </span>
+        )}
         <h1 className="font-bold lg:text-6xl md:text-5xl sm:text-4xl text-3xl">
           {title}
         </h1>
         <h2 className="font-medium lg:text-xl md:text-lg sm:text-base text-sm lg:h-20 md:h-16 sm:h-14 h-12">
-          {description}
+          <span>{description}</span>
         </h2>
         <p className="font-light">
           {voteData.data.length}{' '}
@@ -83,6 +101,7 @@ export default function Poll(props: Props) {
               pollOption={pollOption}
               votes={getVotes(pollOption.id)}
               totalVotes={totalVotes}
+              ended={!!endDate && new Date() > new Date(endDate)}
             />
           );
         })}

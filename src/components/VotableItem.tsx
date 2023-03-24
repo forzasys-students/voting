@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { PollOption } from '@prisma/client';
 import { useMutation } from '@tanstack/react-query';
@@ -13,6 +11,7 @@ interface Props {
   pollOption: PollOption;
   votes: number;
   totalVotes: number;
+  ended: boolean;
 }
 
 const userVote = {
@@ -108,7 +107,7 @@ export default function Poll(props: Props) {
   }, [props.pollOption.pollId]);
 
   function myVote() {
-    // console.log(props.pollOption.id);
+    if (props.ended) return;
 
     if (!vote.isLoading) {
       userVote.set(props.pollOption.pollId, props.pollOption.id);

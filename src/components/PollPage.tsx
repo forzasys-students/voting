@@ -74,7 +74,7 @@ export default function Poll(props: Props) {
         {endDate && (
           <span className="text-slate-600">
             {new Date() > new Date(endDate) && (
-              <span>Avsteming er avsluttet</span>
+              <span>Avstemning er avsluttet</span>
             )}
 
             {new Date() < new Date(endDate) && (

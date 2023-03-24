@@ -1,13 +1,13 @@
-import { useSession } from "next-auth/react";
-import Link from "next/link";
-import { useMemo } from "react";
-import Image from "next/image";
+import { useSession } from 'next-auth/react';
+import Link from 'next/link';
+import { useMemo } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const session = useSession();
 
   const authenticated = useMemo(
-    () => session.status === "authenticated",
+    () => session.status === 'authenticated',
     [session]
   );
 
@@ -16,23 +16,23 @@ export default function Navbar() {
       <div className="right-0">
         <div>
           <Link
-            href={authenticated ? "/admin" : "/login"}
+            href={authenticated ? '/admin' : '/login'}
             className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black lg:right-40 md:right-24 sm:right-10 right-10 font-medium cursor-pointer absolute"
           >
-            {authenticated ? "Admin" : "Logg inn"}
+            {authenticated ? 'Admin' : 'Logg inn'}
           </Link>
           <Link
             href="/"
             className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black lg:right-56 md:right-40 sm:right-24 right-8 sm:mr-6 mr-20 font-medium cursor-pointer absolute"
           >
-            Bytt til tidligere avstemmninger
+            Bytt til tidligere avstemninger
           </Link>
         </div>
         <Link
           href="/"
           className="bg-sky-400 text-white font-bold sm:py-2 py-1 sm:px-4 px-2 border-4 md:text-3xl sm:text-xl lg:right-40 md:right-24 sm:right-10 right-10 sm:top-12 top-8 cursor-pointer absolute"
         >
-          ALLE AVSTEMMNINGER
+          ALLE AVSTEMNINGER
         </Link>
       </div>
 

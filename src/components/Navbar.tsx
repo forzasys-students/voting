@@ -22,7 +22,7 @@ export default function Navbar() {
             {authenticated ? 'Admin' : 'Logg inn'}
           </Link>
           <Link
-            href="/"
+            href="/tidligere"
             className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black lg:right-56 md:right-40 sm:right-24 right-8 sm:mr-6 mr-20 font-medium cursor-pointer absolute"
           >
             Bytt til tidligere avstemninger

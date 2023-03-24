@@ -1,11 +1,10 @@
 import VotableItem from '@/components/VotableItem';
 
 import { PollData } from '@/types/poll';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
-import { useMemo, useState } from 'react';
-import toast from 'react-hot-toast';
+import { useMemo } from 'react';
 
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';

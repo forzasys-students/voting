@@ -25,7 +25,7 @@ export default function Home({
       </Head>
       <main>
         <h1 className="text-5xl text-black font-semibold mb-8">
-          Aktive avstemninger
+          Tidligere avstemninger
         </h1>
 
         {polls.length === 0 && <p className="text-2xl">Ingen avstemninger</p>}

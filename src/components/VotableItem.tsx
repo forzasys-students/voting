@@ -40,12 +40,6 @@ const userVote = {
 export default function Poll(props: Props) {
   const [votedId, setVotedId] = useState<number | null>(null);
 
-  const [data] = useState({
-    eventDate: '◯◯.◯◯.◯◯◯◯',
-    videoLength: '◯◯:◯◯',
-    videoOrigin: 'Oslo, Norway',
-  });
-
   const precentage =
     props.totalVotes !== 0 ? props.votes / props.totalVotes : 0;
 
@@ -172,7 +166,7 @@ export default function Poll(props: Props) {
               </div>
               <div>
                 <p className="font-normal lg:text-base md:text-sm sm:text-xs text-xs">
-                  {data.videoOrigin.toString()}
+                  {props.pollOption.tournamentName}
                 </p>
               </div>
             </div>

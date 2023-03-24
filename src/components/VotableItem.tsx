@@ -87,7 +87,7 @@ export default function Poll(props: Props) {
       }
     }
 
-    /*for (let i in progressBar) {
+    for (let i in progressBar) {
       var widthPercent = ((props.votes / props.totalVotes) * 100).toFixed(0).toString();
       console.log(widthPercent);
       console.log(((props.votes / props.totalVotes) * 100).toFixed(0));
@@ -98,7 +98,7 @@ export default function Poll(props: Props) {
         progressBar[i].className =
           'bg-[#00aeea] lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-['+widthPercent+'%] progress-bar';
       }
-    }*/
+    }
 
     for (let i in percentage) {
       if (percentage.hasOwnProperty(i)) {
@@ -198,7 +198,7 @@ export default function Poll(props: Props) {
           </div>
         </div>
         <div
-          className={'bg-[#00aeea] lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-[90%] progress-bar'}
+          className={'bg-[#00aeea] lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-[0%] progress-bar'}
         ></div>
       </div>
     </div>

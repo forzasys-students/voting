@@ -96,17 +96,18 @@ export default function Poll(props: Props) {
     }
   }
 
-  // Fetch vote from local storage
   useEffect(() => {
+    // Fetch vote from local storage
     const myVote = userVote.get(props.pollOption.pollId);
 
-    if (myVote) {
-      setVotedId(myVote);
-      showVotes();
-    }
-  }, [props.pollOption.pollId]);
+    // Set vote from localStorage
+    if (myVote) setVotedId(myVote);
 
-  function myVote() {
+    // Show result if voted or poll has ended
+    if (props.ended || myVote) showVotes();
+  }, [props.ended, props.pollOption.pollId]);
+
+  function registerVote() {
     if (props.ended) return;
 
     if (!vote.isLoading) {
@@ -146,7 +147,7 @@ export default function Poll(props: Props) {
         className={
           'bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden grid grid-cols-5 gap-0 cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-container'
         }
-        onClick={myVote}
+        onClick={registerVote}
       >
         <div
           className="absolute bg-sky-400 lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 w-0 progress-bar"

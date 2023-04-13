@@ -24,12 +24,14 @@ export default function PollItem(props: Props) {
     return pollEnded(poll);
   }, [poll]);
 
+  if (poll.options.length === 0) return null;
+
   return (
     <Link href={`/poll/${props.poll.id}`}>
       <div className="relative mb-3 hover:shadow-xl">
         <img
           className="bg-black w-full"
-          src={poll.options[0].thumbnailUrl}
+          src={poll.options[0]?.thumbnailUrl}
           alt="Poll thumbnail"
         />
         <div className="bg-black">

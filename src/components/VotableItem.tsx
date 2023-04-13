@@ -98,7 +98,7 @@ export default function Poll(props: Props) {
     if (props.ended || myVote) showVotes();
     if (props.ended || myVote) props.setShowVotes(true);
     //
-  }, [props.ended, props.pollOption.pollId]);
+  }, [props, props.ended, props.pollOption.pollId]);
 
   function registerVote() {
     if (props.ended || votedId !== null) return;

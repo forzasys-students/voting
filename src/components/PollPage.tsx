@@ -29,7 +29,6 @@ interface Props {
 
 export default function Poll(props: Props) {
   const session = useSession();
-  const router = useRouter();
 
   const { title, description, options, endDate } = props.poll;
 

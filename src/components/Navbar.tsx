@@ -12,7 +12,7 @@ export default function Navbar() {
   );
 
   return (
-    <header className="bg-[#10253E] lg:h-36 md:h32 sm:h28 h-22 mb-5 sm:content-end static">
+    <header className="bg-[#10253E] lg:h-36 md:h32 sm:h28 h-22 mb-5 sm:content-end relative">
       <div className="right-0">
         <div>
           <Link

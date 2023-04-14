@@ -123,21 +123,23 @@ export default function Poll(props: Props) {
         'container'
       }
     >
-      <ReactPlayer
-        aspect
-        controls
-        playing
-        width={'100%'}
-        height={'auto'}
-        light={
-          <img
-            src={props.pollOption.thumbnailUrl}
-            alt="Thumbnail"
-            className="w-full"
-          />
-        }
-        url={props.pollOption.videoUrl}
-      ></ReactPlayer>
+      <div className="relative">
+        <ReactPlayer
+          aspect
+          controls
+          playing
+          width={'100%'}
+          height={'auto'}
+          light={
+            <img
+              src={props.pollOption.thumbnailUrl}
+              alt="Thumbnail"
+              className="w-full"
+            />
+          }
+          url={props.pollOption.videoUrl}
+        ></ReactPlayer>
+      </div>
       <div
         className={
           'relative bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-backdrop'

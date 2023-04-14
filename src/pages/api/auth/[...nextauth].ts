@@ -18,36 +18,41 @@ export const authOptions: NextAuthOptions = {
       },
 
       async authorize(credentials, _req) {
-        if (!credentials) {
-          return null;
-        }
+        try {
+          if (!credentials) {
+            return null;
+          }
 
-        // Find the user in the database
-        const user = await prisma.user.findFirst({
-          where: {
-            username: {
-              equals: credentials.username,
-              mode: 'insensitive',
+          // Find the user in the database
+          const user = await prisma.user.findFirst({
+            where: {
+              username: {
+                equals: credentials.username,
+                mode: 'insensitive',
+              },
             },
-          },
-        });
+          });
 
-        // User does not exist
-        if (!user) return null;
+          // User does not exist
+          if (!user) return null;
 
-        // Verify the password with Argon2
-        const valid = await Argon2.verify(
-          user.passwordHash,
-          credentials.password
-        );
+          // Verify the password with Argon2
+          const valid = await Argon2.verify(
+            user.passwordHash,
+            credentials.password
+          );
 
-        // Password is not valid
-        if (!valid) {
+          // Password is not valid
+          if (!valid) {
+            return null;
+          }
+
+          // Return the user object
+          return { id: String(user.id), name: user.username, userId: user.id };
+        } catch (error) {
+          console.error(error);
           return null;
         }
-
-        // Return the user object
-        return { id: String(user.id), name: user.username, userId: user.id };
       },
     }),
   ],

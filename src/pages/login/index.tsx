@@ -1,7 +1,7 @@
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/router";
-import { FormEventHandler, useRef, useState } from "react";
-import toast from "react-hot-toast";
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 interface FormElements extends HTMLFormControlsCollection {
   username: HTMLInputElement;
@@ -15,13 +15,13 @@ interface UsernameFormElement extends HTMLFormElement {
 export default function Login() {
   const router = useRouter();
 
-  const [username, setUsername] = useState("test");
-  const [password, setPassword] = useState("test");
+  const [username, setUsername] = useState('test');
+  const [password, setPassword] = useState('test');
 
   const handleFormSubmit = async (e: React.FormEvent<UsernameFormElement>) => {
     e.preventDefault();
 
-    const response = await signIn("credentials", {
+    const response = await signIn('credentials', {
       username,
       password,
       redirect: false,
@@ -29,15 +29,15 @@ export default function Login() {
 
     switch (response?.status) {
       case 401:
-        toast.error("Feil brukernavn eller passord");
+        toast.error('Feil brukernavn eller passord');
         break;
       case 200:
-        toast.success("Du er nå logget inn!");
-        router.push("/admin");
+        toast.success('Du er nå logget inn!');
+        router.push('/admin');
 
         break;
       default:
-        toast.error("Noe gikk galt, prøv igjen.");
+        toast.error('Noe gikk galt, prøv igjen.');
     }
   };
   return (

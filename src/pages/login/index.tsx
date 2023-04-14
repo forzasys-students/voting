@@ -21,23 +21,28 @@ export default function Login() {
   const handleFormSubmit = async (e: React.FormEvent<UsernameFormElement>) => {
     e.preventDefault();
 
-    const response = await signIn('credentials', {
-      username,
-      password,
-      redirect: false,
-    });
+    try {
+      const response = await signIn('credentials', {
+        username,
+        password,
+        redirect: false,
+      });
 
-    switch (response?.status) {
-      case 401:
-        toast.error('Feil brukernavn eller passord');
-        break;
-      case 200:
-        toast.success('Du er nå logget inn!');
-        router.push('/admin');
+      switch (response?.status) {
+        case 401:
+          toast.error('Feil brukernavn eller passord');
+          break;
+        case 200:
+          toast.success('Du er nå logget inn!');
+          router.push('/admin');
 
-        break;
-      default:
-        toast.error('Noe gikk galt, prøv igjen.');
+          break;
+        default:
+          toast.error('Noe gikk galt, prøv igjen.');
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error('Noe gikk galt, prøv igjen.');
     }
   };
   return (

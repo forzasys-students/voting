@@ -35,17 +35,19 @@ export default function Navbar() {
           ALLE AVSTEMNINGER
         </Link>
       </div>
-
-      <Link href="/">
-        <Image
-          src="/elite-logo.svg"
-          className="md:w-32 md:h-32 sm:w-28 sm:h-28 w-20 h-20 lg:ml-40 md:ml-24 sm:ml-10 ml-10 sm:pt-0 pt-5"
-          alt="Eliteserie Logo"
-          width={32}
-          height={32}
-          priority={true}
-        />
-      </Link>
+      <div
+        className="md:w-32 md:h-32 sm:w-28 sm:h-28 w-20 h-20 lg:ml-40 md:ml-24 sm:ml-10 ml-10 sm:pt-0">
+        <Link href="/">
+          <Image
+            className='pt-5'
+            src="/elite-logo.svg"
+            alt="Eliteserie Logo"
+            width={128}
+            height={128}
+            priority={true}
+          />
+        </Link>
+      </div>
     </header>
   );
 }

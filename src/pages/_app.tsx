@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
 import { Toaster } from 'react-hot-toast';
+import NextNProgress from 'nextjs-progressbar';
 
 export const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ export default function App({
       <SessionProvider session={session}>
         <Toaster toastOptions={{ duration: 10_000 }} />
         <Layout>
+          <NextNProgress />
           <Component {...pageProps} />
         </Layout>
       </SessionProvider>

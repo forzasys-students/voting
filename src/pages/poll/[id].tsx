@@ -1,7 +1,6 @@
-import { PollData } from "@/types/poll";
-import { InferGetServerSidePropsType } from "next";
-import { useRouter } from "next/router";
-import PollPage from "../../components/PollPage";
+import { PollData } from '@/types/poll';
+import { InferGetServerSidePropsType } from 'next';
+import PollPage from '../../components/PollPage';
 
 interface Context {
   query: {

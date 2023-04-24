@@ -22,24 +22,23 @@ export default function Navbar() {
             {authenticated ? 'Admin' : 'Logg inn'}
           </Link>
           <Link
-            href="/tidligere"
+            href="/previous"
             className="text-right mb-2 p-2 md:text-lg sm:text-base text-sm text-white hover:bg-white hover:text-black lg:right-56 md:right-40 sm:right-24 right-8 sm:mr-6 mr-20 font-medium cursor-pointer absolute"
           >
             Bytt til tidligere avstemninger
           </Link>
         </div>
         <Link
-          href="/"
+          href="/all"
           className="bg-[#00aeea] text-white font-bold sm:py-2 py-1 sm:px-4 px-2 border-4 md:text-3xl sm:text-xl lg:right-40 md:right-24 sm:right-10 right-10 sm:top-12 top-8 cursor-pointer absolute"
         >
           ALLE AVSTEMNINGER
         </Link>
       </div>
-      <div
-        className="md:w-32 md:h-32 sm:w-28 sm:h-28 w-20 h-20 lg:ml-40 md:ml-24 sm:ml-10 ml-10 sm:pt-0">
+      <div className="md:w-32 md:h-32 sm:w-28 sm:h-28 w-20 h-20 lg:ml-40 md:ml-24 sm:ml-10 ml-10 sm:pt-0">
         <Link href="/">
           <Image
-            className='pt-5'
+            className="pt-5"
             src="/elite-logo.svg"
             alt="Eliteserie Logo"
             width={128}

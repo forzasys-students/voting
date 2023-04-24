@@ -41,6 +41,20 @@ export default function Home({
             return <PollItem key={poll.id} poll={poll} />;
           })}
         </div>
+
+        <h1 className="text-5xl text-black font-semibold mt-5 mb-8">
+          Tidligere avstemninger
+        </h1>
+
+        {inactivePolls.length === 0 && (
+          <p className="text-2xl">Ingen tidligere avstemninger</p>
+        )}
+
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+          {inactivePolls.map((poll) => {
+            return <PollItem key={poll.id} poll={poll} />;
+          })}
+        </div>
       </main>
     </>
   );

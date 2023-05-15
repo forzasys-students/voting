@@ -76,7 +76,7 @@ export default function Poll(props: Props) {
     for (let i in textBackdrop) {
       if (textBackdrop.hasOwnProperty(i)) {
         textBackdrop[i].className =
-          'relative bg-gray-200 lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-backdrop';
+          'relative bg-gray-200 lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-visible cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-backdrop';
       }
     }
 
@@ -142,7 +142,7 @@ export default function Poll(props: Props) {
       </div>
       <div
         className={
-          'relative bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-hidden cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-backdrop'
+          'relative bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-visible cursor-pointer hover:bg-gray-200 hover:shadow-lg z-0 text-backdrop'
         }
         onClick={registerVote}
       >
@@ -185,6 +185,16 @@ export default function Poll(props: Props) {
               %
             </p>
           </div>
+        </div>
+        <div
+          className={
+            `bg-[#00aeea] pt-2 pb-2 pr-4 pl-4 m-auto absolute rounded-2xl  top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${
+              props.showVotes ? 'hidden' : 'visible'
+            }`
+          }
+          onClick={registerVote}  
+        >
+          <p className='lg:text-xl md:text-base sm:text-sm text-sm font-bold'>Stem</p>
         </div>
         <div
           className={`transition-[width] duration-1000 bg-[#00aeea] lg:h-32 md:h-28 sm:h-24 h-20 overflow-hidden z-10 progress-bar ${

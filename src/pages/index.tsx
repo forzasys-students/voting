@@ -5,6 +5,7 @@ import PollItem from '@/components/PollItem';
 import { PollData } from '@/types/poll';
 import { InferGetServerSidePropsType } from 'next';
 import { pollEnded } from '@/lib/helpers';
+import { any } from 'zod';
 
 export const getServerSideProps = async () => {
   const response = await fetch(`${process.env.NEXTAUTH_URL}/api/poll`);
@@ -17,6 +18,7 @@ export default function Home({
   polls,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const activePolls = polls.filter((poll) => !pollEnded(poll));
+  const firstActivePoll = activePolls[0];
   const inactivePolls = polls.filter(pollEnded);
 
   return (
@@ -35,6 +37,10 @@ export default function Home({
         {activePolls.length === 0 && (
           <p className="text-2xl">Ingen aktive avstemninger</p>
         )}
+
+        <div className="md:grid lg:grid-cols-1 md:mr-20 md:ml-20 mb-4 md:grid-cols-1 sm:grid-cols-1 gap-6 md:visible hidden">
+          <PollItem key={firstActivePoll.id} poll={firstActivePoll}/>
+        </div>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
           {activePolls.map((poll) => {

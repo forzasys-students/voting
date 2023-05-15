@@ -35,7 +35,7 @@ export default function Home({
           <p className="text-2xl">Ingen avstemninger funnet</p>
         )}
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
           {filteredPolls.map((poll) => {
             return <PollItem key={poll.id} poll={poll} />;
           })}

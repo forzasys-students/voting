@@ -18,6 +18,7 @@ export default function Home({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const activePolls = polls.filter((poll) => !pollEnded(poll));
   const inactivePolls = polls.filter(pollEnded);
+  const firstActivePoll = activePolls[0];
 
   return (
     <>
@@ -50,7 +51,7 @@ export default function Home({
           <p className="text-2xl">Ingen tidligere avstemninger</p>
         )}
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
           {inactivePolls.map((poll) => {
             return <PollItem key={poll.id} poll={poll} />;
           })}

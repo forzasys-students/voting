@@ -5,6 +5,9 @@ import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { Poll } from '@prisma/client';
 import { InferGetServerSidePropsType } from 'next';
+import { useState } from 'react';
+import PollItemCard from '@/components/Admin/PollItemCard';
+import { PollData } from '@/types/poll';
 
 export const getServerSideProps = async () => {
   const polls = await prisma.poll.findMany({ orderBy: { id: 'desc' } });
@@ -19,6 +22,8 @@ export default function Admin({
   polls,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const session = useSession();
+
+  const [search, setSearch] = useState('');
 
   if (session.status !== 'authenticated') {
     return (
@@ -51,21 +56,55 @@ export default function Admin({
 
       <h3 className="text-2xl font-bold">Avstemninger</h3>
       {polls.length === 0 && <p className="text-md">Ingen avstemninger</p>}
-      {polls &&
-        polls.map((poll) => {
-          return (
-            <Link key={poll.id} href={`/poll/${poll.id}`}>
-              <div className="py-2 px-3 mb-2 bg-gray-100 hover:bg-gray-200">
-                <div>
-                  <h4 className="text-1xl">{poll.title}</h4>
-                  <p className="text-gray-400">
-                    {poll.description} | {new Date(poll.date).toLocaleString()}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          );
-        })}
+
+      {polls && (
+        <div>
+          <div className="mb-3">
+            <label htmlFor="password">Søk</label>
+            <input
+              id="search"
+              type="text"
+              className="w-full p-2 text-primary border outline-none text-sm transition "
+              placeholder="Tittel eller beskrivelse"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+          <div className="grid">
+            {polls
+              .filter((p) => {
+                if (!search) return true;
+
+                const value = search.trim().toLowerCase();
+
+                return (
+                  p.title.toLowerCase().includes(value) ||
+                  p.description.toLowerCase().includes(value)
+                );
+              })
+              .sort((a, b) => {
+                if (!a.endDate) return -1;
+                if (!b.endDate) return 1;
+
+                if (a.endDate && b.endDate) {
+                  return (
+                    new Date(b.endDate).getTime() -
+                    new Date(a.endDate).getTime()
+                  );
+                }
+
+                return 0;
+              })
+              .map((poll) => {
+                return (
+                  <Link key={poll.id} href={`/poll/${poll.id}`}>
+                    <PollItemCard poll={poll as PollData} />
+                  </Link>
+                );
+              })}
+          </div>
+        </div>
+      )}
     </>
   );
 }

@@ -28,6 +28,7 @@ import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
 import { Button } from '@/components/Button';
+import InfoText from '@/components/Info';
 
 const getMatchData = async () => {
   const response = await fetch('/api/matchdata');
@@ -180,7 +181,9 @@ export default function EditPoll({
 
       <form className="mt-3">
         <div>
-          <label htmlFor="username">Tittel</label>
+          <label htmlFor="title">
+            Tittel <InfoText text="Titlene på avstemningen" />
+          </label>
           <input
             id="title"
             type="title"
@@ -192,7 +195,9 @@ export default function EditPoll({
         </div>
 
         <div>
-          <label htmlFor="password">Beskrivelse</label>
+          <label htmlFor="description">
+            Beskrivelse <InfoText text="Beskrivelse på avstemning" />
+          </label>
           <input
             id="description"
             type="description"
@@ -204,7 +209,9 @@ export default function EditPoll({
         </div>
 
         <div className="mb-3">
-          <label className="block">Sluttdato</label>
+          <label className="block">
+            Sluttdato <InfoText text="Dato for får avstemning skal lukkes" />
+          </label>
           <DateTimePicker onChange={setEndDate} value={endDate} />
           <small className="block text-gray-700">
             {dayjs(endDate).fromNow()}
@@ -212,7 +219,7 @@ export default function EditPoll({
         </div>
 
         <button
-          className="flex py-2 px-3 text-sm rounded border border-gray-400 focus:outline-none enabled:hover:bg-blue-900 enabled:hover:text-white disabled:opacity-50"
+          className="bg-gray-100 p-3 mt-3 enabled:hover:bg-gray-200 disabled:cursor-not-allowed"
           onClick={(e) => {
             e.preventDefault();
             mutation.mutate();

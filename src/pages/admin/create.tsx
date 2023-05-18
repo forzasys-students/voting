@@ -25,6 +25,7 @@ import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
+import InfoText from '@/components/Info';
 
 const getMatchData = async () => {
   const response = await fetch('/api/matchdata');
@@ -99,9 +100,25 @@ export default function CreatePoll() {
 
       <h3 className="text-2xl font-bold ">Lag ny avstemning</h3>
 
+      <button
+        className="bg-gray-100 p-3 mt-3 enabled:hover:bg-gray-200 disabled:cursor-not-allowed"
+        onClick={(e) => {
+          e.preventDefault();
+          mutation.mutate();
+        }}
+        disabled={
+          mutation.isLoading || events.length === 0 || !title || !description
+        }
+      >
+        Lag avstemning
+      </button>
+
       <form className="mt-3">
+        <div></div>
         <div>
-          <label htmlFor="username">Tittel</label>
+          <label htmlFor="title">
+            Tittel <InfoText text="Titlene på avstemningen" />
+          </label>
           <input
             id="title"
             type="title"
@@ -112,7 +129,9 @@ export default function CreatePoll() {
           />
         </div>
         <div>
-          <label htmlFor="password">Beskrivelse</label>
+          <label htmlFor="description">
+            Beskrivelse <InfoText text="Beskrivelse på avstemning" />
+          </label>
           <input
             id="description"
             type="description"
@@ -124,7 +143,9 @@ export default function CreatePoll() {
         </div>
 
         <div className="mb-3">
-          <label className="block">Sluttdato</label>
+          <label className="block">
+            Sluttdato <InfoText text="Dato for får avstemning skal lukkes" />
+          </label>
           <DateTimePicker onChange={setEndDate} value={endDate} />
           <small className="block text-gray-700">
             {dayjs(endDate).fromNow()}
@@ -132,7 +153,10 @@ export default function CreatePoll() {
         </div>
 
         <div>
-          <label htmlFor="password">Hendelser ({events.length} valgt)</label>
+          <label htmlFor="password">
+            Hendelser ({events.length} valgt){' '}
+            <InfoText text="Kamp hendelser og klipp som skal stemmes over" />
+          </label>
 
           <div className="flex flex-row flex-wrap gap-3 mb-3 mt-1">
             {matchData.data.playlists.slice(0, 15).map((event) => {
@@ -192,7 +216,7 @@ export default function CreatePoll() {
         </div>
 
         <button
-          className="flex bg-green py-3 px-4 text-sm text-primary rounded border border-gray-400 focus:outline-none focus:border-green-dark enabled:hover:bg-blue-900 enabled:hover:text-white disabled:opacity-50"
+          className="bg-gray-100 p-3 mt-3 enabled:hover:bg-gray-200 disabled:cursor-not-allowed"
           onClick={(e) => {
             e.preventDefault();
             mutation.mutate();

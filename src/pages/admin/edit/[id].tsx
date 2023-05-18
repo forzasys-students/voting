@@ -182,11 +182,11 @@ export default function EditPoll({
       <form className="mt-3">
         <div>
           <label htmlFor="title">
-            Tittel <InfoText text="Titlene på avstemningen" />
+            Tittel <InfoText text="Tittelen på avstemningen" />
           </label>
           <input
             id="title"
-            type="title"
+            type="text"
             className="w-full p-2 text-primary border border-gray-400 rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
             placeholder="Avstemning tittel"
             value={title}
@@ -200,7 +200,7 @@ export default function EditPoll({
           </label>
           <input
             id="description"
-            type="description"
+            type="text"
             className="w-full p-2 text-primary border border-gray-400 rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
             placeholder="Beskrivelse av avstemning"
             value={description}

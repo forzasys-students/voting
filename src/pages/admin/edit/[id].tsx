@@ -210,7 +210,7 @@ export default function EditPoll({
 
         <div className="mb-3">
           <label className="block">
-            Sluttdato <InfoText text="Dato for får avstemning skal lukkes" />
+            Sluttdato <InfoText text="Dato for når avstemning skal lukkes" />
           </label>
           <DateTimePicker onChange={setEndDate} value={endDate} />
           <small className="block text-gray-700">

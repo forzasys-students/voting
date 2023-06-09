@@ -144,7 +144,6 @@ export default function Poll(props: Props) {
         className={
           'relative bg-[#f2f2f2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-visible cursor-pointer z-0 text-backdrop'
         }
-        onClick={registerVote}
       >
         <div className="absolute grid grid-cols-5 gap-0">
           <div className="col-span-5 z-20 text-container">

@@ -142,7 +142,7 @@ export default function Poll(props: Props) {
       </div>
       <div
         className={
-          'relative bg-[#f2f2f2] hover:bg-[#e2e2e2] lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-visible cursor-pointer z-0 text-backdrop'
+          'relative bg-[#f2f2f2] hover:bg-[#e2e2e2] hover:shadow-lg lg:h-32 md:h-28 sm:h-24 h-20 w-full overflow-visible cursor-pointer z-0 text-backdrop'
         }
       >
         <div className="absolute grid grid-cols-5 gap-0">
